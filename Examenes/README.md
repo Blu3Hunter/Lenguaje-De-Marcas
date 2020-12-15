@@ -2,4 +2,4 @@
 
 El objetivo de este exámen, será tener una página similar a la siguiente imágen:
 
-![file:///Y:/ExamenHtml.jpg]
+![https://imgur.com/iIWLH34]
