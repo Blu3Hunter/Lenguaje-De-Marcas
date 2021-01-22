@@ -5,3 +5,8 @@ div{
     padding:5px 10px;
 
 }
+
+li {
+    display: inline-block; 
+}
+
