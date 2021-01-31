@@ -1,0 +1,9 @@
+table, tr, th, td {
+
+    border: 1px solid black;
+  
+}
+#fila4{
+    font-weight: bold;
+    /* color: red; */
+  }
