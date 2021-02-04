@@ -1,0 +1,38 @@
+p#destacado{
+ border-style: solid;
+ margin-right: 67%;
+}
+
+p.destacado{
+    border-style: solid;
+    margin-right: 67%;
+}
+
+p.destacado, span#id{
+    border-style: solid;
+    margin-right: 67%;
+}
+
+p.destacado{
+    border-style: solid;
+ margin-right: 67%;
+} li.elemento_enumeracion{
+    border-style: solid;
+    margin-right: 40%;
+}
+
+p.destacado{
+    border-style: solid;
+ margin-right: 70%;
+}
+
+.destacado > #id{
+    border-style: solid;
+    margin-right: 67%;
+}
+
+.p_destacado{
+    border-style: solid;
+    margin-right: 67%;
+}
+
