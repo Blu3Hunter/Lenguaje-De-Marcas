@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Examen parte 4 HTML</title>
+    <link href="minimal-table.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Datos de los planetas</h1>
+    <table>
+      <caption>Datos sobre los planetas de nuestro sistema solar (hechos planetarios tomados de <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).</caption>
+      <colgroup>
+        <col span="2">
+        <col style="border: 2px solid black">
+        <col span="9">
+      </colgroup>
+      <thead>
+        <tr>
+          <td colspan="2"></td>
+          <th>Nombre</th>
+          <th>Masa (10<sup>24</sup>kg)</th>
+          <th>Diametro (km)</th>
+          <th>Densidad (kg/m<sup>3</sup>)</th>
+          <th>Gravedad (m/s<sup>2</sup>)</th>
+          <th>Duración del día (horas)</th>
+          <th>Distancia desde el sol (10<sup>6</sup>km)</th>
+          <th>Temperatura media(°C)</th>
+          <th>Número de Lunas</th>
+          <th>Notas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="4" colspan="2" scope="rowgroup">Planetas terrestres</th>
+          <th>Mercurio</th>
+          <td>0.330</td>
+          <td>4,879</td>
+          <td>5427</td>
+          <td>3.7</td>
+          <td>4222.6</td>
+          <td>57.9</td> 
+          <td>167</td>
+          <td>0</td>
+          <td>El más cercano al Sol</td>
+        </tr>
+        <tr>
+          <th>Venus</th>
+          <td>4.87</td>
+          <td>12,104</td>
+          <td>5243</td>
+          <td>8.9</td>
+          <td>2802.0</td>
+          <td>108.2</td>
+          <td>464</td>
+          <td>0</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Tierra</th>
+          <td>5.97</td>
+          <td>12,756</td>
+          <td>5514</td>
+          <td>9.8</td>
+          <td>24.0</td>
+          <td>149.6</td>
+          <td>15</td>
+          <td>1</td>
+          <td>Nuestro planeta</td>
+        </tr>
+        <tr>
+          <th>Marte</th>
+          <td>0.642</td>
+          <td>6,792</td>
+          <td>3933</td>
+          <td>3.7</td>
+          <td>24.7</td>
+          <td>227.9</td>
+          <td>-65</td>
+          <td>2</td>
+          <td>El planeta rojo</td>
+        </tr>
+        <tr>
+          <th rowspan="4" scope="rowgroup">Planetas jovianos</th>
+          <th rowspan="2" scope="rowgroup">Gigantes de gas</th>
+          <th>Jupiter</th>
+          <td>1898</td>
+          <td>142,984</td>
+          <td>1326</td>
+          <td>23.1</td>
+          <td>9.9</td>
+          <td>778.6</td>
+          <td>-110</td>
+          <td>67</td>
+          <td>El mayor planeta</td>
+        </tr>
+        <tr>
+          <th>Saturno</th>
+          <td>568</td>
+          <td>120,536</td>
+          <td>687</td>
+          <td>9.0</td>
+          <td>10.7</td>
+          <td>1433.5</td>
+          <td>-140</td>
+          <td>62</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th rowspan="2" scope="rowgroup">Gigantes de hielo</th>
+          <th>Urano</th>
+          <td>86.8</td>
+          <td>51,118</td>
+          <td>1271</td>
+          <td>8.7</td>
+          <td>17.2</td>
+          <td>2872.5</td>
+          <td>-195</td>
+          <td>27</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Neptuno</th>
+          <td>102</td>
+          <td>49,528</td>
+          <td>1638</td>
+          <td>11.0</td>
+          <td>16.1</td>
+          <td>4495.1</td>
+          <td>-200</td>
+          <td>14</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th colspan="2" scope="row">Planetas enanos</th>
+          <th>Plutón</th>
+          <td>0.0146</td>
+          <td>2,370</td>
+          <td>2095</td>
+          <td>0.7</td>
+          <td>153.3</td>
+          <td>5906.4</td>
+          <td>-225</td>
+          <td>5</td>
+          <td>Desclasificado como planeta en 2006, pero esto <a href="http://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">permanece polémico</a>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
