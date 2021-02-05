@@ -1,0 +1,1 @@
+El primer color será rojo ya que está bajo la instrucción de ``!important`` y es el que está más cerca de la etiqueta de ``<html>``
