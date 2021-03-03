@@ -1,0 +1,161 @@
+#e14_2 { 
+	overflow:hidden;
+	background-color:rgba(46.000001057982445, 92.00000211596489, 151.00000619888306, 1);
+	width:517px;
+	height:777px;
+	position:absolute;
+}
+#e14_6 { 
+	color:rgba(255, 255, 255, 1);
+	width:413px;
+	height:530px;
+	position:absolute;
+	left:47px;
+	top:208px;
+	font-family:Pridi;
+	text-align:left;
+	font-size:13px;
+	letter-spacing:0;
+}
+#e14_7 { 
+	color:rgba(255, 255, 255, 1);
+	width:392px;
+	height:56px;
+	position:absolute;
+	left:28px;
+	top:23px;
+	font-family:Pridi;
+	text-align:left;
+	font-size:36px;
+	letter-spacing:0;
+}
+#e14_9 { 
+	color:rgba(255, 255, 255, 1);
+	width:269px;
+	height:28px;
+	position:absolute;
+	left:68px;
+	top:86px;
+	font-family:Pridi;
+	text-align:left;
+	font-size:18px;
+	letter-spacing:0;
+}
+#e14_13 { 
+	color:rgba(255, 255, 255, 1);
+	width:126px;
+	height:28px;
+	position:absolute;
+	left:68px;
+	top:120px;
+	font-family:Pridi;
+	text-align:left;
+	font-size:18px;
+	letter-spacing:0;
+}
+#e14_15 { 
+	color:rgba(255, 255, 255, 1);
+	width:99px;
+	height:28px;
+	position:absolute;
+	left:68px;
+	top:159px;
+	font-family:Pridi;
+	text-align:left;
+	font-size:18px;
+	letter-spacing:0;
+}
+#e14_24 { 
+	width:50px;
+	height:50px;
+	position:absolute;
+	left:9px;
+	top:725px;
+	background-image:url(images/emenu.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e14_25 { 
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	width:115px;
+	height:152px;
+	position:absolute;
+	left:373px;
+	top:86px;
+	border-top-left-radius:63px;
+	border-top-right-radius:63px;
+	border-bottom-left-radius:63px;
+	border-bottom-right-radius:63px;
+	background-image:url();
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e14_8 { 
+	width:30px;
+	height:30px;
+	position:absolute;
+	left:32px;
+	top:85px;
+	background-image:url(images/egmail.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e14_12 { 
+	width:30px;
+	height:30px;
+	position:absolute;
+	left:32px;
+	top:120px;
+	background-image:url(images/emap_pin.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e14_14 { 
+	width:30px;
+	height:30px;
+	position:absolute;
+	left:32px;
+	top:158px;
+	background-image:url(images/egithub.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e14_18 { 
+	width:23px;
+	height:20px;
+	position:absolute;
+	left:110px;
+	top:670px;
+	background-image:url(images/estar.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e14_23 { 
+	width:23px;
+	height:20px;
+	position:absolute;
+	left:75px;
+	top:705px;
+	background-image:url(images/estar.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e14_19 { 
+	width:23px;
+	height:20px;
+	position:absolute;
+	left:86px;
+	top:670px;
+	background-image:url(images/estar.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.img20200915072512-1 {
+	height: 160px;
+	pointer-events: auto;
+	transition: all 0.2s ease;
+	width: 123px;
+  }
+  .img20200915072512-1:hover {
+	transform: rotate(15deg);
+  }
