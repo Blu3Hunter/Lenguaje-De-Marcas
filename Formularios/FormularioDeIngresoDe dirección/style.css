@@ -1,0 +1,28 @@
+#vertical-bar {
+    border-left: 3px solid rgb(31, 198, 240);
+    width: 10px;
+    height: 100px;
+}
+
+#TextoBonito{
+    margin-left: 10px;
+
+}
+p{
+    font-weight: bolder;
+}
+
+#Boton{
+    background-color:  rgb(65, 163, 187);
+    color:white;
+    padding: 10px;
+}
+
+select{
+    border: 1px solid black;
+    font-size: 14px;
+    height: 40px;
+    padding: 5px;
+    width: 300px;
+}
+
