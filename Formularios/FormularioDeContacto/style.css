@@ -1,5 +1,6 @@
 *{
     font-family: 'Exo 2', sans-serif;
+    font-weight: bolder;
 }
 input[type=text], select, textarea {
     width: 100%; /* Full width */
@@ -35,6 +36,7 @@ input[type=text], select, textarea {
   }
 .texto{
     text-align: center;
-    font-size: 15px;
+    font-size: 30px;
     color: #59d4d8;
+    font-weight: bolder;
 }
