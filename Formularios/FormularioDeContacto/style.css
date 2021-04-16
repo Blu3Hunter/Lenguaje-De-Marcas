@@ -40,3 +40,12 @@ input[type=text], select, textarea {
     color: #59d4d8;
     font-weight: bolder;
 }
+i{
+  color: #59d4d8;
+}
+img{
+  position: relative;
+  width: 15px;
+  height: 15px;
+  color: #59d4d8;
+}

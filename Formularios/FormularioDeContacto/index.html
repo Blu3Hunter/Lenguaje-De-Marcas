@@ -7,24 +7,25 @@
     <title>Formulario de contacto</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     
 </head>
 <body>
     <div class="container">
         <p class="texto">Contact Us</p>
-        <form action="action_page.php">
+        <form>
       
-          <label for="fname">First Name</label>
+          <i class="fas fa-user"></i> <label for="fname">First Name</label>
           <input type="text" id="fname" name="firstname" placeholder="Your name..">
       
-          <label for="lname">Last Name</label>
+          <i class="fas fa-user"></i> <label for="lname">Last Name</label>
           <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-          <label for="lname">Email Address</label>
+          <i class="far fa-envelope"></i> <label for="lname">Email Address</label>
           <input type="text" id="lname" name="lastname" placeholder="Email here">
       
-          <label for="lname">Phone</label>
+          <img src="telefono.png"> <label for="lname">Phone</label>
           <input type="text" id="lname" name="lastname" placeholder="Phone">
       
           <!-- <label for="country">Country</label>
@@ -34,7 +35,7 @@
             <option value="usa">USA</option>
           </select> -->
       
-          <label for="subject">Subject</label>
+          <i class="fas fa-edit"></i> <label for="subject">Subject</label>
           <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
       
           <input type="submit" value="Submit">
