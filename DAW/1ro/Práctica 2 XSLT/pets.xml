@@ -1,0 +1,52 @@
+<pets>
+	<petType name="Dogs">
+		<pet id="123" name="Sparky" vaccineStatus="vaccinated" healthStatus="healthy" />
+		<pet id="234" name="Sadie" vaccineStatus="unvaccinated" healthStatus="sick" />
+		<pet id="345" name="Herman" vaccineStatus="unvaccinated" healthStatus="sick" />
+	</petType>
+	<petType name="Cats">
+		<pet id="456" name="Cleo" vaccineStatus="vaccinated" healthStatus="healthy" />
+		<pet id="567" name="Janet" vaccineStatus="unvaccinated" healthStatus="healthy" />
+		<pet id="678" name="Furry" vaccineStatus="vaccinated" healthStatus="sick" />
+	</petType>
+	<petType name="Bunnies">
+		<pet id="789" name="Hommer" vaccineStatus="vaccinated" healthStatus="healthy" />
+		<pet id="890" name="Thomas" vaccineStatus="unvaccinated" healthStatus="sick" />
+		<pet id="901" name="Sandy" vaccineStatus="vaccinated" healthStatus="sick" />
+	</petType>
+	<petType name="Birds">
+		<pet id="012" name="Harry" vaccineStatus="vaccinated" healthStatus="healthy" />
+		<pet id="000" name="Al" vaccineStatus="unvaccinated" healthStatus="sick" />
+		<pet id="111" name="Peter" vaccineStatus="unvaccinated" healthStatus="sick" />
+	</petType>
+	<petType name="Hamsters">
+		<pet id="222" name="Roberta" vaccineStatus="vaccinated" healthStatus="healthy" />
+		<pet id="333" name="Sherlock" vaccineStatus="unvaccinated" healthStatus="healthy" />
+		<pet id="901" name="Tity" vaccineStatus="vaccinated" healthStatus="sick" />
+	</petType>
+	<petType name="Gremlins">
+		<pet id="444" name="Dracula" vaccineStatus="unvaccinated" healthStatus="healthy" />
+		<pet id="555" name="Frankenstein" vaccineStatus="unvaccinated" healthStatus="sick" />
+		<pet id="666" name="Hugo" vaccineStatus="unvaccinated" healthStatus="sick" />
+	</petType>
+	<petType name="Cows">
+		<pet id="777" name="Pluto" vaccineStatus="vaccinated" healthStatus="healthy" />
+		<pet id="888" name="Adele" vaccineStatus="vaccinated" healthStatus="sick" />
+		<pet id="999" name="Saddy" vaccineStatus="vaccinated" healthStatus="sick" />
+	</petType>
+	<petType name="Snakes">
+		<pet id="987" name="Large" vaccineStatus="unvaccinated" healthStatus="healthy" />
+		<pet id="876" name="Larger" vaccineStatus="unvaccinated" healthStatus="sick" />
+		<pet id="765" name="Largest" vaccineStatus="vaccinated" healthStatus="sick" />
+	</petType>
+	<petType name="Supremacists">
+		<pet id="654" name="Adolf" vaccineStatus="unvaccinated" healthStatus="sick" />
+		<pet id="543" name="Donald" vaccineStatus="unvaccinated" healthStatus="sick" />
+		<pet id="432" name="Jair" vaccineStatus="unvaccinated" healthStatus="sick" />
+	</petType>
+	<petType name="Viruses">
+		<pet id="321" name="Ebola" vaccineStatus="vaccinated" healthStatus="healthy" />
+		<pet id="210" name="Aids" vaccineStatus="vaccinated" healthStatus="healthy" />
+		<pet id="109" name="Corona" vaccineStatus="vaccinated" healthStatus="healthy" />
+	</petType>
+</pets>
