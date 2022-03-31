@@ -1,0 +1,19 @@
+#encabezado{
+    background-color: beige;
+}
+#imagen{
+    margin-left: 40%;
+}
+h1{
+    color: blue;
+}
+.imagenAlLado{  
+    display:inline-block;
+}
+#centrarTexto{
+    text-align: center;
+}
+table, th, td {
+    margin: auto;
+    border: 1px solid;
+}

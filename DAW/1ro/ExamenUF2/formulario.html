@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validarFormulario.js"></script>
+</head>
+<body>
+
+    <div id="encabezado">
+        <div id="imagen">
+            <a href="index.html"><img src="img/tuenti.png" alt="Logo tuenti" style="width: 30%;"></a>
+        </div>
+    </div>
+
+
+    <div id="centrarTexto">
+        <h1 style="color: black;">Únete a Tuenti</h1>
+        <p>Todos los campos son obligatorios</p>    
+
+        <form class="Formulario" action="">
+            <label for="Nombre">Nombre completo: </label>
+
+            <input type="text" id="Nombre" placeholder="Introduce tu nombre" name="Nombre" required>
+            <input type="text" id="Apellidos" placeholder="Introduce tus apellidos" name="Apellidos" required>
+
+            <br>
+            <br>
+
+            <label for="Email">Email: </label>
+            <input type="email" id="Email" placeholder="Introduce tu email" name="Email" required>
+
+            <br>
+            <br>
+            <label for="Sexo" required>Sexo:
+                <input type="checkbox" name="Hombre" id="Hombre"> Hombre 
+                <input type="checkbox" name="Mujer" id="Mujer"> Mujer 
+            </label>
+
+            <br>
+            <br>
+
+            <label for="nacimiento">Fecha de nacimiento: </label>
+            <input type="date" placeholder="Introduce tu fecha de nacimiento" name="nacimiento" id="nacimiento" required>
+
+            <br>
+            <br>
+
+            <label for="telefono">Número de teléfono</label>
+            <input type="number" placeholder="Teléfono" name="telefono" id="telefono" maxlength="9">
+
+            <br>
+            <br>
+
+            <label for="puestoDeTrabajo">Puesto de trabajo: </label>
+            <select name="Trabajo" required>
+                <option>Analista programador</option>
+                <option>Programador frontend</option>
+                <option>Programador backend</option>
+                <option>Analista de base de datos</option>
+            </select>
+
+            <br>
+            <br>
+
+            <label for="Condiciones">
+                <input type="checkbox" name="Condiciones" id="Condiciones" required> Acepta las <a href="https://www.youtube.com/watch?v=LH5ay10RTGY">Condiciones de uso</a> y <a href="https://www.youtube.com/watch?v=QH2-TGUlwu4">Politicas de privacidad</a>
+            </label>
+
+            <br>
+            <br>
+
+            <button type="button" onclick="validacion() ">Disfruta de tuenti</button>
+        </form>
+
+    </div>
+
+</body>
+</html>
