@@ -19,10 +19,10 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link fs-5  " aria-current="page" href="index.html">Registrar producto</a>
+            <a class="nav-link fs-5  fw-bold" aria-current="page" href="index.html">Registrar producto</a>
           </li>
           <li class="nav-item fs-5">
-            <a class="nav-link active text-white" href="listar.html">Listar producto</a>
+            <a class="nav-link active text-white fw-bold" href="listar.html">Listar producto</a>
           </li>
         </ul>
       </div>
@@ -30,7 +30,7 @@
   </nav>
 
   <div class="text-center mt-5">
-    <span class="text-white fs-1">¡Lista de productos! :)</span>
+    <span class="text-white fs-1 fw-bold">¡Lista de productos! :)</span>
   </div>
 
   <div class="container bg-white mt-5 rounded-5 p-5 mb-5">
@@ -66,11 +66,11 @@
       ?>
       <thead>
         <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Descripción</th>
-          <th scope="col">Cantidad</th>
-          <th scope="col">Precio</th>
+          <th scope="col fw-bold">ID</th>
+          <th scope="col fw-bold">Nombre</th>
+          <th scope="col fw-bold">Descripción</th>
+          <th scope="col fw-bold">Cantidad</th>
+          <th scope="col fw-bold">Precio</th>
         </tr>
       </thead>
       <tbody>
