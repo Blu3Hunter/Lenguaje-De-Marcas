@@ -6,46 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Warframe Fan Page</title>
     <link rel="icon" href="assets/Logo.png" />
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Titillium+Web&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <img src="assets/Logo.png" alt="Logo" style="width: 50px; height: 50px" />
-    <nav>
-      <ul>
-        <li>
-          <a href="historia.html">Historia</a>
-        </li>
-        <li>
-          <a href="Universo.html">Universo</a>
-        </li>
-        <li>
-          <a href="personajes.html">Personajes</a>
-        </li>
-        <li>
-          <a href="contacto.html">Contacto</a>
-        </li>
-      </ul>
-    </nav>
+    <header class="sticky">
+      <nav class="p-10">
+        <img src="assets/Logo.png" alt="Logo" class="logo" />
 
-    <video src="assets/trailer.mp4" autoplay muted></video>
+        <ul class="textCenter mt-10">
+          <li>
+            <a href="historia.html">Historia</a>
+          </li>
+          <li>
+            <a href="Universo.html">Universo</a>
+          </li>
+          <li>
+            <a href="personajes.html">Personajes</a>
+          </li>
+          <li>
+            <a href="contacto.html" class="mr-5">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <span>¿Qué es Warframe?</span>
+    <video src="assets/trailer.mp4" autoplay muted loop id="video"></video>
+
+    <div class="textCenter">
+      <span class="fs-45 fw-bold">¿Qué es Warframe?</span>
+    </div>
     <br />
-    <span
-      >Warframe es un videojuego de disparos en tercera persona gratuito de
-      modalidad jugador contra entorno individual o cooperativo, aunque posee
-      una modalidad jugador contra jugador en los modos de juego conocidos como
-      Cónclave, y Lunaro.</span
-    >
+    <div class="textCenter">
+      <span class="fs-30 p-5"
+        >Warframe es un videojuego de disparos en tercera persona gratuito de
+        modalidad jugador contra entorno individual o cooperativo, aunque posee
+        una modalidad jugador contra jugador en los modos de juego conocidos
+        como Cónclave, y Lunaro.</span
+      >
+      <p></p>
+      <br />
+      <span class="fs-30 p-5">
+        La historia del desarrollo del juego Warframe ha sido objeto de análisis
+        por parte de diversas personalidades reconocidas, y por medios de
+        comunicación. De la mano del estudio Digital Extremes, el concepto
+        original de este juego se remonta al primer teaser del juego Dark Sector
+        mostrado el año 2004, en el cual se mostraban aspectos estéticos, de
+        ambiente, y de jugabilidad que; luego de una serie de traspiés; serían
+        retomados el año 2012 por el estudio padre de Warframe en medio de una
+        crisis que los tuvo al borde de la quiebra.
+      </span>
+      <p></p>
+      <br />
+    </div>
 
-    <hr>
+    <br />
+    <div class="mb-20">&ensp;</div>
+
     <footer>
-      <img src="assets/Logo.png">
-      <span>Telefono: 123 456 789</span>
-      <span>Email: emailWarframe@gmail.com</span>
-      <span>Dirección: Calle falsa 123</span>
+      <div class="footer-content">
+        <h3>Axel Arroyo Giménez</h3>
+        <i>Words build briges into unexplored regions.</i>
+        <ul class="socials textCenter">
+          <li>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-discord"></i></a>
+          </li>
+          <li>
+            <a href="https://github.com/ItzAxxel"><i class="bi bi-github"></i></a>
+          </li>
+          <li>
+            <a href="https://www.twitch.tv/bluehunter_tv"
+              ><i class="bi bi-twitch"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </footer>
   </body>
-
 </html>
