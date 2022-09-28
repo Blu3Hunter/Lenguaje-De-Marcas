@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $productName = $_GET['productName'];
 $description = $_GET['description'];
@@ -10,19 +10,20 @@ $user = "root";
 $password = "";
 $db = "productos";
 
-$con=mysqli_connect($server,$user,$password,$db);
+$con = mysqli_connect($server, $user, $password, $db);
 
-if(!$con){
+if (!$con) {
     echo "No se ha podido realizar la conexión";
 } else {
-    mysqli_set_charset($con,"utf8");
+    mysqli_set_charset($con, "utf8");
 
-    $sql="INSERT INTO `producto`(`id`, `nombre`, `descripcion`, `cantidad`, `precio`) VALUES
-    (NULL,'$productName','$description','$quantity','$price')";
+    $sql = "INSERT INTO `producto`(`id`, `nombre`, `descripcion`, `cantidad`, `precio`) VALUES
+        (NULL,'$productName','$description','$quantity','$price')";
 
-    $query=mysqli_query($con,$sql);
+    $query = mysqli_query($con, $sql);
 }
 
-header('Location: index.html');
+header('Location: listar.php');
 exit;
 ?>
+

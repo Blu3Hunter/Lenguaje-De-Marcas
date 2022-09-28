@@ -19,21 +19,27 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link fs-5  fw-bold" aria-current="page" href="index.html">Registrar producto</a>
+            <a class="nav-link  fs-5  fw-bold" aria-current="page" href="index.html">Registrar producto</a>
           </li>
-          <li class="nav-item fs-5">
-            <a class="nav-link active text-white fw-bold" href="listar.html">Listar producto</a>
+          <li class="nav-item">
+            <a class="nav-link fs-5 fw-bold active text-white" href="listar.php">Listar producto</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
+
   <div class="text-center mt-5">
     <span class="text-white fs-1 fw-bold">¡Lista de productos! :)</span>
   </div>
 
   <div class="container bg-white mt-5 rounded-5 p-5 mb-5">
+  
+    
+
+
+
 
     <table class="table">
       <?php
@@ -45,7 +51,6 @@
 
       $con = mysqli_connect($server, $user, $password, $db);
 
-
       if (!$con) {
         echo "No se ha podido realizar la conexión";
       } else {
@@ -54,7 +59,6 @@
         $consulta = mysqli_query($con, $sql2);
         while ($fila = $consulta->fetch_assoc()) {
           echo "<tr>";
-          echo "<td>" . $fila["id"] . "</td>";
           echo "<td>" . $fila["nombre"] . "</td>";
           echo "<td>" . $fila["descripcion"] . "</td>";
           echo "<td>" . $fila["cantidad"] . "</td>";
@@ -62,20 +66,20 @@
           echo "</tr>";
         }
       }
-      
+
       ?>
-      <thead>
+
+      <thead class="mt-3">
         <tr>
-          <th scope="col fw-bold">ID</th>
           <th scope="col fw-bold">Nombre</th>
           <th scope="col fw-bold">Descripción</th>
           <th scope="col fw-bold">Cantidad</th>
           <th scope="col fw-bold">Precio</th>
+
         </tr>
       </thead>
       <tbody>
       </tbody>
-
 
     </table>
 
