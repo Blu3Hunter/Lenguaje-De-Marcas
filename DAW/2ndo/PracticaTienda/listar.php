@@ -26,6 +26,11 @@
             <a class="nav-link fs-5 text-white" href="listar.php">Listar producto</a>
           </li>
         </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link fs-5 " aria-current="page" href="index.html">Cuenta</a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -82,8 +87,8 @@
           <button class='btn btn-danger'><i class='bi bi-trash-fill'></i></button></form></td>";
           echo "</tr>";
         }
+
       }
-      header('Location: listar.php');
       ?>
 
       <thead class="mt-3">
@@ -97,11 +102,11 @@
       </thead>
       <tbody>
       </tbody>
-
     </table>
 
 
   </div>
+
 </body>
 
 </html>

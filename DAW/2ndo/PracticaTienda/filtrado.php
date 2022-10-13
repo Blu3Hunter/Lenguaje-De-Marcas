@@ -83,7 +83,7 @@
                     }
                 }
             }
-
+            header('Location: filtrado.php');
             ?>
 
             <thead class="mt-3">
