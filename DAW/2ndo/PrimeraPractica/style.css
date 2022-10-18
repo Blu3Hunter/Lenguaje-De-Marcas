@@ -38,7 +38,7 @@ ul {
     list-style: none;
   }
   
-  a {
+  .icon {
     position: relative;
     display: block;
     margin: 0 10px;
@@ -51,7 +51,7 @@ ul {
     overflow: hidden;
   }
   
-  a:before {
+  .icon:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -63,7 +63,7 @@ ul {
   }
 
   
-   a:hover {
+  .icon:hover {
     background-color: crimson;
     color: white;
   }
@@ -76,43 +76,16 @@ ul {
     padding-bottom: 50px;
     width: 100%;
   }
-  .textCenter{
-    text-align: center;
-  }
-  .fs-45{
-    font-size: 45px;
-    
-  }
-  .fs-30{
-    font-size: 30px;
-  }
-  .fw-bold{
-    font-weight: bold;
-  }
 
-  .p-10{
-    padding: 10x;
-  }
-  .px-5{
-    padding-right: 5px;
-    padding-left: 5px;
-  }
-  .p-5{
-    padding: 5px;
-  }
   .logo{
     width: 5%; 
     height: 25%;
   }
-  .mt-10{
-    margin-top: 10px;
-  }
-  .mb-20{
-    margin-bottom: 20px;
-  }
-  .mr-5{
-    margin-right: 5px;
-  }
+
+
+
+
+
   footer{
 
     bottom: 0;
@@ -170,6 +143,8 @@ ul {
   transition: color .4s ease;
 }
 
+
+
 .footer-bottom{
   background: #000;
   width: 100vw;
@@ -188,10 +163,46 @@ ul {
  font-size: 16px;
  text-decoration: none;
 }
+
+
 .footer-bottom span{
    text-transform: uppercase;
    opacity: .4;
    font-weight: 200;
 }
 
-  
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 
+.o88b. db    db .d8888. d888888b  .d88b.  .88b  d88.       .o88b. .d8888. .d8888. 
+d8P  Y8 88    88 88'  YP `~~88~~' .8P  Y8. 88'YbdP`88      d8P  Y8 88'  YP 88'  YP 
+8P      88    88 `8bo.      88    88    88 88  88  88      8P      `8bo.   `8bo.   
+8b      88    88   `Y8b.    88    88    88 88  88  88      8b        `Y8b.   `Y8b. 
+Y8b  d8 88b  d88 db   8D    88    `8b  d8' 88  88  88      Y8b  d8 db   8D db   8D 
+ `Y88P' ~Y8888P' `8888Y'    YP     `Y88P'  YP  YP  YP       `Y88P' `8888Y' `8888Y' 
+
+                                                                                    */
+
+.w-20{
+  width: 20% !important;
+}
+
+.text-red{
+  color: red !important;
+}
+
+.active{
+  background-color: crimson !important;
+  color: white !important;
+}
+
+.test{
+  background-color: crimson !important;
+  color: white !important;
+  position: absolute;
+  font-weight: 700!important;
+  margin-top: -30px !important;
+}

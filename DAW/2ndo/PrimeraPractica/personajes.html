@@ -1,21 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personajes</title>
-    <link rel="icon" href="assets/Logo.png">
-</head>
-<body>
-    Aquí iran los personajes
-    <a href="index.html">Volver atrás</a>
-    <hr>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warframe Fan Page</title>
+    <link rel="icon" href="assets/Logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Titillium+Web&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky">
+      <div class="container-fluid">
+        <a href="index.html"
+          ><img
+            class="navbar-brand w-20"
+            href="index.html"
+            src="assets/Logo.png"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-end fs-5">
+            <li class="nav-item">
+              <a class="nav-link icon" aria-current="page" href="historia.html"
+                >Historia</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link icon active" href="personajes.html"
+                >Personajes</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link icon" href="universo.html">Universo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link icon" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="text-center mb-2">
+      <span class="text-center fs-1 fw-bold">Warframes</span>
+    </div>
+
+    <div class="container">
+      <div class="d-flex flex-column justify-content-around">
+        <div class="d-flex flex-row gap-3 flex-wrap">
+          <div class="card" style="width: 18rem">
+            <img
+              src="assets/warframes/default/Ash.png"
+              class="card-img-top h-75"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="position-relative test rounded-top w-100">
+                <h5 class="card-title text-center">Ash</h5>
+              </div>
+              <p class="card-text text-center fs-5">
+                Ash es un Warframe rápido y maniobrable que posee un alto grado
+                de supervivencia en el campo. 
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="assets/warframes/default/AtlasFull.webp"
+              class="card-img-top h-75"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="position-relative test rounded-top w-100">
+                <h5 class="card-title text-center">Atlas</h5>
+              </div>
+              <p class="card-text">Warframe de piedra.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="assets/warframes/default/Banshee.png"
+              class="card-img-top h-75"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="position-relative test rounded-top w-100">
+                <h5 class="card-title text-center">Banshee</h5>
+              </div>
+              <p class="card-text">Warframe de sonido.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="assets/warframes/default/Baruuk.webp"
+              class="card-img-top h-75"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="position-relative test rounded-top w-100">
+                <h5 class="card-title text-center">Baruuk</h5>
+              </div>
+              <p class="card-text">Warframe cura.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mb-2">
+      <span class="text-center fs-1 fw-bold">Primes</span>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
     <footer>
-      <img src="assets/Logo.png">
-      <span>Telefono: 123 456 789</span>
-      <span>Email: emailWarframe@gmail.com</span>
-      <span>Dirección: Calle falsa 123</span>
+      <div class="footer-content">
+        <h3>Axel Arroyo Giménez</h3>
+        <i>Words build briges into unexplored regions.</i>
+        <ul class="socials textCenter">
+          <li>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-discord"></i></a>
+          </li>
+          <li>
+            <a href="https://github.com/ItzAxxel"
+              ><i class="bi bi-github"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.twitch.tv/bluehunter_tv"
+              ><i class="bi bi-twitch"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

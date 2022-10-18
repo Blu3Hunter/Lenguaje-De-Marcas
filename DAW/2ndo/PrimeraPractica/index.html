@@ -16,61 +16,81 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="sticky">
-      <nav class="p-10">
-        <img src="assets/Logo.png" alt="Logo" class="logo" />
-
-        <ul class="textCenter mt-10">
-          <li>
-            <a href="historia.html">Historia</a>
-          </li>
-          <li>
-            <a href="Universo.html">Universo</a>
-          </li>
-          <li>
-            <a href="personajes.html">Personajes</a>
-          </li>
-          <li>
-            <a href="contacto.html" class="mr-5">Contacto</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <nav class="navbar navbar-expand-lg sticky">
+      <div class="container-fluid">
+        <a href="index.html"><img class="navbar-brand w-20" href="index.html" src="assets/Logo.png" /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-end fs-5">
+            <li class="nav-item">
+              <a class="nav-link icon " href="historia.html">Historia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link icon " href="personajes.html">Personajes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link icon " href="universo.html">Universo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link icon "  href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <video src="assets/trailer.mp4" autoplay muted loop id="video"></video>
 
-    <div class="textCenter">
-      <span class="fs-45 fw-bold">¿Qué es Warframe?</span>
+    <div class="text-center">
+      <span class="fs-1 fw-bold">¿Qué es Warframe?</span>
     </div>
     <br />
-    <div class="textCenter">
-      <span class="fs-30 p-5"
-        >Warframe es un videojuego de disparos en tercera persona gratuito de
-        modalidad jugador contra entorno individual o cooperativo, aunque posee
-        una modalidad jugador contra jugador en los modos de juego conocidos
-        como Cónclave, y Lunaro.</span
-      >
-      <p></p>
-      <br />
-      <span class="fs-30 p-5">
-        La historia del desarrollo del juego Warframe ha sido objeto de análisis
-        por parte de diversas personalidades reconocidas, y por medios de
-        comunicación. De la mano del estudio Digital Extremes, el concepto
-        original de este juego se remonta al primer teaser del juego Dark Sector
-        mostrado el año 2004, en el cual se mostraban aspectos estéticos, de
-        ambiente, y de jugabilidad que; luego de una serie de traspiés; serían
-        retomados el año 2012 por el estudio padre de Warframe en medio de una
-        crisis que los tuvo al borde de la quiebra.
-      </span>
-      <p></p>
-      <br />
+    <div class="container">
+      <div class="text-center">
+        <span class="fs-5 p-5"
+          >Warframe es un videojuego de disparos en tercera persona gratuito de
+          modalidad jugador contra entorno individual o cooperativo, aunque
+          posee una modalidad jugador contra jugador en los modos de juego
+          conocidos como Cónclave, y Lunaro.</span
+        >
+        <p></p>
+        <br />
+        <span class="fs-5 p-5">
+          La historia del desarrollo del juego Warframe ha sido objeto de
+          análisis por parte de diversas personalidades reconocidas, y por
+          medios de comunicación. De la mano del estudio Digital Extremes, el
+          concepto original de este juego se remonta al primer teaser del juego
+          Dark Sector mostrado el año 2004, en el cual se mostraban aspectos
+          estéticos, de ambiente, y de jugabilidad que; luego de una serie de
+          traspiés; serían retomados el año 2012 por el estudio padre de
+          Warframe en medio de una crisis que los tuvo al borde de la quiebra.
+        </span>
+        <p></p>
+        <br />
+      </div>
     </div>
 
     <br />
-    <div class="mb-20">&ensp;</div>
 
     <footer>
       <div class="footer-content">
@@ -84,7 +104,9 @@
             <a href="#"><i class="bi bi-discord"></i></a>
           </li>
           <li>
-            <a href="https://github.com/ItzAxxel"><i class="bi bi-github"></i></a>
+            <a href="https://github.com/ItzAxxel"
+              ><i class="bi bi-github"></i
+            ></a>
           </li>
           <li>
             <a href="https://www.twitch.tv/bluehunter_tv"
