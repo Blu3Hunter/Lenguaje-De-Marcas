@@ -28,7 +28,7 @@
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link fs-5 " aria-current="page" href="index.html">Cuenta</a>
+            <a class="nav-link fs-5 " aria-current="page" href="cuenta.html">Cuenta</a>
           </li>
         </ul>
       </div>

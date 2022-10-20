@@ -64,26 +64,31 @@
             $filtro = $_GET["filtro"];
 
             $con = mysqli_connect($server, $user, $password, $db);
+            try {
+                if (!$con) {
+                    echo "No se ha podido realizar la conexión";
+                } else {
+                    mysqli_set_charset($con, "utf8");
+                    $sql2 = "SELECT * FROM `producto` WHERE $select LIKE '$filtro%'";
+                    $consulta = mysqli_query($con, $sql2);
+                    while ($fila = $consulta->fetch_assoc()) {
+                        echo "<tr>";
+                        if (str_starts_with($fila[$select], $filtro)) {
 
-            if (!$con) {
-                echo "No se ha podido realizar la conexión";
-            } else {
-                mysqli_set_charset($con, "utf8");
-                $sql2 = "SELECT * FROM `producto` WHERE $select LIKE '$filtro%'";
-                $consulta = mysqli_query($con, $sql2);
-                while ($fila = $consulta->fetch_assoc()) {
-                    echo "<tr>";
-                    if (str_starts_with($fila[$select], $filtro)) {
-
-                        echo "<td>" . $fila["nombre"] . "</td>";
-                        echo "<td>" . $fila["descripcion"] . "</td>";
-                        echo "<td>" . $fila["cantidad"] . "</td>";
-                        echo "<td>" . $fila["precio"] . "</td>";
-                        echo "</tr>";
+                            echo "<td>" . $fila["nombre"] . "</td>";
+                            echo "<td>" . $fila["descripcion"] . "</td>";
+                            echo "<td>" . $fila["cantidad"] . "</td>";
+                            echo "<td>" . $fila["precio"] . "</td>";
+                            echo "</tr>";
+                        }
                     }
                 }
+            } catch (mysqli_sql_exception $e) {
+                var_dump($e);
+                exit;
             }
-            header('Location: filtrado.php');
+
+
             ?>
 
             <thead class="mt-3">
