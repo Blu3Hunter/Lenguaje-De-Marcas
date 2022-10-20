@@ -1,4 +1,9 @@
 <?php
+session_start();
+$_SESSION["id"];
+$_SESSION["email"];
+$_SESSION["admin"];
+
 
 $productName = $_GET['productName'];
 $description = $_GET['description'];
@@ -25,5 +30,3 @@ if (!$con) {
 
 header('Location: listar.php');
 exit;
-?>
-
