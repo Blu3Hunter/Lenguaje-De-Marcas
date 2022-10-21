@@ -1,3 +1,50 @@
+<?php
+
+session_start();
+
+$_SESSION["admin"];
+
+
+if ($_SESSION["admin"] == 1) { ?>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS only -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Listado de productos</title>
+  </head>
+
+  <body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger py-5">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="index.php">Registrar producto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </body>
+
+  </html>
+<?php
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,15 +67,12 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link fs-5 " aria-current="page" href="index.html">Registrar producto</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link fs-5 text-white" href="listar.php">Listar producto</a>
           </li>
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link fs-5 " aria-current="page" href="cuenta.html">Cuenta</a>
+            <a class="nav-link fs-5 " aria-current="page" href="cuenta.php">Cuenta</a>
           </li>
         </ul>
       </div>
@@ -83,11 +127,13 @@
           echo "<td>" . $fila["descripcion"] . "</td>";
           echo "<td>" . $fila["cantidad"] . "</td>";
           echo "<td>" . $fila["precio"] . "</td>";
-          echo "<td><form action='borrar.php?id=" . $fila['id'] . "' method='post'>
-          <button class='btn btn-danger'><i class='bi bi-trash-fill'></i></button></form></td>";
-          echo "</tr>";
-        }
+          if($_SESSION["admin"] == 1){
+            echo "<td><form action='borrar.php?id=" . $fila['id'] . "' method='post'>
+            <button class='btn btn-danger'><i class='bi bi-trash-fill'></i></button></form></td>";
+            echo "</tr>";
 
+          }
+        }
       }
       ?>
 
@@ -97,7 +143,13 @@
           <th scope="col fw-bold">Descripción</th>
           <th scope="col fw-bold">Cantidad</th>
           <th scope="col fw-bold">Precio</th>
-          <th scope="col fw-blod">Acción</th>
+          <?php
+          if($_SESSION["admin"] == 1){
+            
+            echo "<th scope='col fw-blod'>Acción</th>";
+
+          }
+            ?>
         </tr>
       </thead>
       <tbody>

@@ -11,13 +11,15 @@ $contrasena = $_GET["contrasena"];
 
 $encriptada = sha1($contrasena);
 
-var_dump('hola'.$encriptada);
 if (!$con) {
     echo "No se ha podido realizar la conexión";
 } else {
     $sql2 = "SELECT * FROM `usuarios`";
     $consulta = mysqli_query($con, $sql2);
     while ($resultados = $consulta->fetch_assoc()) {
+        var_dump($resultados["contrasena"] . $resultados["email"]);
+        var_dump($encriptada . $resultados["email"]);
+
         if ($resultados["contrasena"] == $encriptada && $resultados["email"] == $email) {
             session_start();
             $_SESSION["id"] = $resultados['id'];
@@ -25,7 +27,7 @@ if (!$con) {
             $_SESSION["admin"] = $resultados['admin'];
             header('Location: cuenta.php');
         }
-    }
+    } 
 }
 
 ?>
