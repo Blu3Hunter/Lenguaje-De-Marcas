@@ -1,10 +1,5 @@
 <?php
-$server = "localhost";
-$user = "root";
-$password = "";
-$db = "productos";
-
-$con = mysqli_connect($server, $user, $password, $db);
+include "conn.php";
 
 $nombreUsuario = $_GET["nombre"];
 $email = $_GET["email"];

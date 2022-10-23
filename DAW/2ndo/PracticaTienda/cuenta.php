@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+include "conn.php";
 $_SESSION["admin"];
 
 
@@ -29,7 +29,7 @@ if ($_SESSION["admin"] == 1) { ?>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
             <li class="nav-item">
-              <a class="nav-link fs-5 " aria-current="page" href="index.php">Registrar producto</a>
+              <a class="nav-link fs-5 " aria-current="page" href="indexProducto.php">Registrar producto</a>
             </li>
           </ul>
         </div>
@@ -86,15 +86,6 @@ if ($_SESSION["admin"] == 1) { ?>
       <img class="mx-auto rounded-circle" src="https://avatars.githubusercontent.com/u/58775176?v=4">
       <hr>
       <?php
-
-
-
-      $server = "localhost";
-      $user = "root";
-      $password = "";
-      $db = "productos";
-
-      $con = mysqli_connect($server, $user, $password, $db);
 
       if (!$con) {
         echo "No se ha podido realizar la conexión";

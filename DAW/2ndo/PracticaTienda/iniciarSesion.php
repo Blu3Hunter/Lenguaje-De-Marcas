@@ -46,7 +46,7 @@
                     <div class="form-check d-flex justify-content-start mb-5">
                       <label class="form-check-label" for="form2Example3">
                         ¿No tienes cuenta?
-                        <a href="registrarUsuario.html">Registrate </a>
+                        <a href="index.php">Registrate </a>
                       </label>
                     </div>
 

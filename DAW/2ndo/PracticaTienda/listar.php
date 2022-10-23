@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+include "conn.php";
 $_SESSION["admin"];
 
 
@@ -31,7 +31,7 @@ if ($_SESSION["admin"] == 1) { ?>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link fs-5" href="index.php">Registrar producto</a>
+              <a class="nav-link fs-5" href="indexProducto.php">Registrar producto</a>
             </li>
           </ul>
         </div>
@@ -88,7 +88,9 @@ if ($_SESSION["admin"] == 1) { ?>
 
 
     <form method="get" action="filtrado.php">
-
+      <div class="text-center mb-3">
+        <span class="text-black fs-3 ">Filtrar: </span>
+      </div>
       <div class="row">
         <div class="col-6">
           <input type="text" class="form-control" name="filtro">
@@ -108,13 +110,6 @@ if ($_SESSION["admin"] == 1) { ?>
     <table class="table">
       <?php
 
-      $server = "localhost";
-      $user = "root";
-      $password = "";
-      $db = "productos";
-
-      $con = mysqli_connect($server, $user, $password, $db);
-
       if (!$con) {
         echo "No se ha podido realizar la conexión";
       } else {
@@ -127,11 +122,10 @@ if ($_SESSION["admin"] == 1) { ?>
           echo "<td>" . $fila["descripcion"] . "</td>";
           echo "<td>" . $fila["cantidad"] . "</td>";
           echo "<td>" . $fila["precio"] . "</td>";
-          if($_SESSION["admin"] == 1){
+          if ($_SESSION["admin"] == 1) {
             echo "<td><form action='borrar.php?id=" . $fila['id'] . "' method='post'>
             <button class='btn btn-danger'><i class='bi bi-trash-fill'></i></button></form></td>";
             echo "</tr>";
-
           }
         }
       }
@@ -144,12 +138,11 @@ if ($_SESSION["admin"] == 1) { ?>
           <th scope="col fw-bold">Cantidad</th>
           <th scope="col fw-bold">Precio</th>
           <?php
-          if($_SESSION["admin"] == 1){
-            
-            echo "<th scope='col fw-blod'>Acción</th>";
+          if ($_SESSION["admin"] == 1) {
 
+            echo "<th scope='col fw-blod'>Acción</th>";
           }
-            ?>
+          ?>
         </tr>
       </thead>
       <tbody>
