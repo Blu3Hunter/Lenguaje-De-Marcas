@@ -23,6 +23,13 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <head>
@@ -33,14 +40,140 @@
     <link rel="icon" href="assets/Logo.png" />
   </head>
   <body>
-    Aquí irá todo el universo
-    <a href="index.html">Volver atrás</a>
-    <hr />
+    <nav class="navbar navbar-expand-lg sticky">
+      <div class="container-fluid">
+        <a href="index.html"
+          ><img
+            class="navbar-brand w-20"
+            href="index.html"
+            src="assets/Logo.png"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-end fs-5">
+            <li class="nav-item">
+              <a class="nav-link icon" href="historia.html">Historia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link icon" href="personajes.html">Personajes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link icon active" href="universo.html">Universo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link icon" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="container">
+      <span class="text-center fs-2"
+        >En Warframe hay varias cosas que puedes hacer. Puedes
+        <span id="farmear">farmear</span>,
+        <span id="historia">seguir con la historia principal</span> o
+        <span id="ayudar">ayudar a las facciones</span> a hacerse más grandes.
+      </span>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <div class="row form-group">
+        <div class="flex col-6 order-0">
+          <img src="assets/farming.jpg" class="w-100" />
+        </div>
+
+        <div class="flex col-6 order-1">
+          <span class="fs-2"
+            >Si eliges farmear, deberás pasar MUCHO tiempo para poder obtener
+            todos los recursos necesarios para crear las armas y personajes para
+            seguir avanzando en tu gran travesía.</span
+          >
+        </div>
+
+        <div class="flex col-6 order-3 mt-2">
+          <img src="assets/lua.jpg" class="w-100" />
+        </div>
+
+        <div class="flex col-6 order-2 mt-2">
+          <span class="fs-2"
+            >Si eliges contuinuar con la historia principal, te encontraras con
+            grandes desafíos, pero te valdrá la pena. Pues este juego tiene una
+            historia muy buena que te atrapa desde el primer momento.</span
+          >
+        </div>
+
+        <div class="flex col-6 order-4 mt-2">
+          <img src="assets/factions.jpg" class="w-100" />
+        </div>
+
+        <div class="flex col-6 order-5 mt-2">
+          <span class="fs-2"
+            >Si eliges ayudar a las facciones, podrás recibir grandes
+            recompensas. Además, podrás subir de nivel en estas facciones y
+            obtendrás mejores recompensas.</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
     <footer>
-      <img src="assets/Logo.png" />
-      <span>Telefono: 123 456 789</span>
-      <span>Email: emailWarframe@gmail.com</span>
-      <span>Dirección: Calle falsa 123</span>
+      <div class="footer-content">
+        <h3>Axel Arroyo Giménez</h3>
+        <i>Words build briges into unexplored regions.</i>
+        <ul class="socials textCenter mt-2">
+          <li>
+            <a class="icon"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li>
+            <a class="icon"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a class="icon"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a class="icon"><i class="fab fa-google"></i></a>
+          </li>
+          <li>
+            <a class="icon"><i class="fab fa-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>

@@ -23,37 +23,176 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    /> 
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    Aquí irá el contacto
-    <a href="index.html">Volver atrás</a>
+    <nav class="navbar navbar-expand-lg sticky">
+      <div class="container-fluid">
+        <a href="index.html"
+          ><img
+            class="navbar-brand w-20"
+            href="index.html"
+            src="assets/Logo.png"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-end fs-5">
+            <li class="nav-item">
+              <a class="nav-link icon" href="historia.html">Historia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link icon" href="personajes.html">Personajes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link icon" href="universo.html">Universo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link icon active" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <br />
+    <br />
+    <br />
+    <br />
     <br />
     <br />
 
-    <form>
-      <label for="nombre">Nombre:</label>
-      <input type="text" />
-      <br />
-      <br />
-      <label for="correo">Email:</label>
-      <input type="email" name="email" />
-      <br />
-      <br />
-      <label for="mensaje">Mensaje</label>
-      <input type="text" name="mensaje" id="" />
-      <br />
-      <br />
-      <button type="submit">Enviar</button>
-    </form>
+    <div class="container">
+      <!--Section: Contact v.2-->
+      <section class="mb-4">
+        <!--Section heading-->
+        <h2 class="h1-responsive font-weight-bold text-center my-4 fs-3">
+          Contactanos
+        </h2>
+        <!--Section description-->
+        <p class="text-center w-responsive mx-auto mb-5 fs-4">
+          ¿Tienes alguna sugerencia o quieres ponerte en contacto con nosotros?
+          ¡Envianos un mensaje!
+        </p>
 
-    <hr />
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form">
+              <!--Grid row-->
+              <div class="row">
+                <!--Grid column-->
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="form-control"
+                    />
+                    <label for="name" class="">Tu nombre</label>
+                  </div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <input
+                      type="text"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                    />
+                    <label for="email" class="">Tu email</label>
+                  </div>
+                </div>
+                <!--Grid column-->
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="md-form mb-0">
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      class="form-control"
+                    />
+                    <label for="subject" class="">Asunto</label>
+                  </div>
+                </div>
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+                <!--Grid column-->
+                <div class="col-md-12">
+                  <div class="md-form">
+                    <textarea
+                      type="text"
+                      id="message"
+                      name="message"
+                      rows="2"
+                      class="form-control md-textarea"
+                    ></textarea>
+                    <label for="message">Mensaje</label>
+                  </div>
+                </div>
+              </div>
+              <!--Grid row-->
+            </form>
+            <br />
+            <div class="text-start text-md-left">
+              <button class="btn btn-primary">Enviar</button>
+            </div>
+          </div>
+          <!--Grid column-->
+        </div>
+      </section>
+      <!--Section: Contact v.2-->
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
     <footer>
-      <img src="assets/Logo.png" />
-      <span>Telefono: 123 456 789</span>
-      <span>Email: emailWarframe@gmail.com</span>
-      <span>Dirección: Calle falsa 123</span>
+      <div class="footer-content">
+        <h3>Axel Arroyo Giménez</h3>
+        <i>Words build briges into unexplored regions.</i>
+        <ul class="socials textCenter mt-2">
+          <li><a  class="icon"><i class="fab fa-facebook"></i></a></li>
+          <li><a  class="icon"><i class="fab fa-twitter"></i></a></li>
+          <li><a  class="icon"><i class="fab fa-instagram"></i></a></li>
+          <li><a  class="icon"><i class="fab fa-google"></i></a></li>
+          <li><a  class="icon"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>

@@ -23,6 +23,13 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -78,11 +85,12 @@
     <div class="text-center mb-2">
       <span class="text-center fs-1 fw-bold">Warframes</span>
     </div>
-
+    <br />
+    <br />
     <div class="container">
       <div class="d-flex flex-column justify-content-around">
-        <div class="d-flex flex-row gap-3 flex-wrap">
-          <div class="card" style="width: 18rem">
+        <div class="d-flex flex-row gap-5 flex-wrap">
+          <div class="card card-shadow" style="width: 18rem">
             <img
               src="assets/warframes/default/Ash.png"
               class="card-img-top h-75"
@@ -94,11 +102,11 @@
               </div>
               <p class="card-text text-center fs-5">
                 Ash es un Warframe rápido y maniobrable que posee un alto grado
-                de supervivencia en el campo. 
+                de supervivencia en el campo.
               </p>
             </div>
           </div>
-          <div class="card" style="width: 18rem">
+          <div class="card card-shadow" style="width: 18rem">
             <img
               src="assets/warframes/default/AtlasFull.webp"
               class="card-img-top h-75"
@@ -108,7 +116,10 @@
               <div class="position-relative test rounded-top w-100">
                 <h5 class="card-title text-center">Atlas</h5>
               </div>
-              <p class="card-text">Warframe de piedra.</p>
+              <p class="card-text text-center fs-5">
+                Atlas es un warfarme como una roca. Tiene habilidades para
+                protegerse a él y sus aliados.
+              </p>
             </div>
           </div>
           <div class="card" style="width: 18rem">
@@ -121,10 +132,13 @@
               <div class="position-relative test rounded-top w-100">
                 <h5 class="card-title text-center">Banshee</h5>
               </div>
-              <p class="card-text">Warframe de sonido.</p>
+              <p class="card-text text-center fs-5">
+                Banshee es una warframe que usa el sonido para ser útil en
+                combate. Y también puede desarmar a los enemigos.
+              </p>
             </div>
           </div>
-          <div class="card" style="width: 18rem">
+          <div class="card card-shadow" style="width: 18rem">
             <img
               src="assets/warframes/default/Baruuk.webp"
               class="card-img-top h-75"
@@ -134,15 +148,89 @@
               <div class="position-relative test rounded-top w-100">
                 <h5 class="card-title text-center">Baruuk</h5>
               </div>
-              <p class="card-text">Warframe cura.</p>
+              <p class="card-text text-center fs-5">
+                Baruuk es un warfame que usa el poder de la fe para poder llegar
+                a hacer daño a sus enemigos.
+              </p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="text-center mb-2">
+          <span class="text-center fs-1 fw-bold">Primes</span>
+        </div>
+        <br />
+        <br />
+        <div class="d-flex flex-row gap-5 flex-wrap">
+          <div class="card card-shadow" style="width: 18rem">
+            <img
+              src="assets/warframes/prime/AshPrimeFull.png"
+              class="card-img-top h-75"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="position-relative test rounded-top w-100">
+                <h5 class="card-title text-center">Ash</h5>
+              </div>
+              <p class="card-text text-center fs-5">
+                Ash es un Warframe rápido y maniobrable que posee un alto grado
+                de supervivencia en el campo.
+              </p>
+            </div>
+          </div>
+
+          <div class="card card-shadow" style="width: 18rem">
+            <img
+              src="assets/warframes/prime/AtlasPrimeFull.webp"
+              class="card-img-top h-75"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="position-relative test rounded-top w-100">
+                <h5 class="card-title text-center">Atlas</h5>
+              </div>
+              <p class="card-text text-center fs-5">
+                Atlas es un warfarme como una roca. Tiene habilidades para
+                protegerse a él y sus aliados.
+              </p>
+            </div>
+          </div>
+
+          <div class="card card-shadow" style="width: 18rem">
+            <img
+              src="assets/warframes/prime/BansheePrimeFull.webp"
+              class="card-img-top h-75"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="position-relative test rounded-top w-100">
+                <h5 class="card-title text-center">Banshee</h5>
+              </div>
+              <p class="card-text text-center fs-5">
+                Banshee es una warframe que usa el sonido para ser útil en
+                combate. Y también puede desarmar a los enemigos.
+              </p>
+            </div>
+          </div>
+          <div class="card card-shadow" style="width: 18rem">
+            <img
+              src="assets/warframes/prime/ChromaPrimeFull.webp"
+              class="card-img-top h-75"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="position-relative test rounded-top w-100">
+                <h5 class="card-title text-center">Chroma</h5>
+              </div>
+              <p class="card-text text-center fs-5">
+                Chroma es un warframe que tiene el poder del dragón para poder
+                abrasar al enemigo y ayudar a sus aliados.
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="text-center mb-2">
-      <span class="text-center fs-1 fw-bold">Primes</span>
     </div>
 
     <br />
@@ -156,22 +244,21 @@
       <div class="footer-content">
         <h3>Axel Arroyo Giménez</h3>
         <i>Words build briges into unexplored regions.</i>
-        <ul class="socials textCenter">
+        <ul class="socials textCenter mt-2">
           <li>
-            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a class="icon"><i class="fab fa-facebook"></i></a>
           </li>
           <li>
-            <a href="#"><i class="bi bi-discord"></i></a>
+            <a class="icon"><i class="fab fa-twitter"></i></a>
           </li>
           <li>
-            <a href="https://github.com/ItzAxxel"
-              ><i class="bi bi-github"></i
-            ></a>
+            <a class="icon"><i class="fab fa-instagram"></i></a>
           </li>
           <li>
-            <a href="https://www.twitch.tv/bluehunter_tv"
-              ><i class="bi bi-twitch"></i>
-            </a>
+            <a class="icon"><i class="fab fa-google"></i></a>
+          </li>
+          <li>
+            <a class="icon"><i class="fab fa-youtube"></i></a>
           </li>
         </ul>
       </div>
