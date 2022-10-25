@@ -1,16 +1,17 @@
 <?php
+session_start();
+include "conn.php";
+$_SESSION["id"];
+$_SESSION["email"];
+$_SESSION["admin"];
+
 
 $productName = $_GET['productName'];
 $description = $_GET['description'];
 $quantity = $_GET['quantity'];
 $price = $_GET['price'];
 
-$server = "localhost";
-$user = "root";
-$password = "";
-$db = "productos";
 
-$con = mysqli_connect($server, $user, $password, $db);
 
 if (!$con) {
     echo "No se ha podido realizar la conexión";
@@ -25,5 +26,3 @@ if (!$con) {
 
 header('Location: listar.php');
 exit;
-?>
-

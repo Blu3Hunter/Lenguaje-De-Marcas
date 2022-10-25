@@ -1,11 +1,5 @@
 <?php
-
-
-$server = "localhost";
-$user = "root";
-$password = "";
-$db = "productos";
-$con = mysqli_connect($server, $user, $password, $db);
+include "conn.php";
 
 $getID = $_GET["id"];
 

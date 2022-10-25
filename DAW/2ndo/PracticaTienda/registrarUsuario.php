@@ -26,7 +26,7 @@
                     Registrarse
                   </p>
 
-                  <form class="mx-1 mx-md-4" method="GET" action="registro.php">
+                  <form class="mx-1 mx-md-4" method="POST">
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
@@ -65,11 +65,78 @@
                     <div class="form-check d-flex justify-content-start mb-5">
                       <label class="form-check-label" for="form2Example3">
                         ¿Ya tienes cuenta?
-                        <a href="iniciarSesion.php">Inicia sesión</a>
+                        <a href="iniciarSesion.html">Inicia sesión</a>
                       </label>
                     </div>
 
                     <div class="d-flex justify-content-start mx-4 mb-3 mb-lg-4">
+
+                      <?php
+
+                      // $registro = new ControladorFormularios();
+                      // $registro -> ctrRegistro(); TODO: mirar si borrar despues
+                      // echo $registro; 
+
+                      $registro = ControladorFormularios::ctrRegistro();
+
+                      if ($registro) {
+
+
+                                            echo '<script>
+                        
+                            if(window.history.replaceState){
+                                window.history.replaceState(null,null,window.location.href);
+                            }
+                        
+                        </script>';
+
+                        echo '<div class="alert alert-success">Registro exitoso</div>';
+                      }
+
+
+                      ?>
+
+                      <!-- <?php
+
+                      $server = "localhost";
+                      $user = "root";
+                      $password = "";
+                      $db = "productos";
+
+                      $con = mysqli_connect($server, $user, $password, $db);
+
+                      $nombreUsuario = $_GET["nombre"];
+                      $email = $_GET["email"];
+
+                      $contrasena = $_GET["contrasena"];
+                      $repetirContrasena = $_GET["repetirContrasena"];
+
+                      // if (controladoresRegistro::cRegistros($contrasena, $repetirContrasena)) {
+
+                      //   echo '<scrip>
+                      //         if(window.history.remplaceState){
+                      //           window.hhistory.remplaceState(null,null,window.location.href);
+                      //           </script>';
+
+                      //           echo '<div class"danger danger-success"> Registro cumpleatado<div>';
+
+                      // }
+
+                      if (!$con) {
+                        echo "No se ha podido realizar la conexión";
+                      } else {
+                        mysqli_set_charset($con, "utf8");
+
+                        $sql = "INSERT INTO usuarios(nombre, email, contrasena) VALUES
+                            (NULL,'$nombreUsuario','$email','$contrasena')";
+
+                        $query = mysqli_query($con, $sql);
+                      }
+
+                      ?> -->
+
+
+
                       <button type="submit" class="btn btn-primary btn-lg">
                         Registar
                       </button>
