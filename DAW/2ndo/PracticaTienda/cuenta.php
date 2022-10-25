@@ -77,10 +77,6 @@ if ($_SESSION["admin"] == 1) { ?>
   </nav>
 
 
-
-
-
-
   <div class="container bg-white mt-5 rounded-5 p-5 mb-5">
     <div class="d-flex flex-column mx-auto">
       <img class="mx-auto rounded-circle" src="https://avatars.githubusercontent.com/u/58775176?v=4">
