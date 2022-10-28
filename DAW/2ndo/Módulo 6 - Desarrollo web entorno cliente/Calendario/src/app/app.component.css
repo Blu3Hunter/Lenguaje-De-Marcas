@@ -1,0 +1,16 @@
+.festivo-nacional{
+    color: #49E37C;
+}
+.festivo-regional{
+    color: #7A65D6;
+}
+.festivo-local{
+    color: #E14DB0;
+}
+.festivo-centro{
+    color: #CAE252;
+}
+.row-cols-6>* {
+    flex: 0 0 auto !important;
+    width: 13.666667% !important;
+}
