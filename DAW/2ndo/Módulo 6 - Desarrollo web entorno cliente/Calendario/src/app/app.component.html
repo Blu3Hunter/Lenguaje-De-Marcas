@@ -11,10 +11,7 @@
   <table class="bg-light rounded-3">
     <div class="p-5">
       <div class="row row-cols-6">
-        <td
-          *ngFor="let dias of semana"
-          class="text-danger text-center"
-        >
+        <td *ngFor="let dias of semana" class="text-danger text-center">
           <tr>
             {{
               dias
@@ -26,8 +23,7 @@
         <td *ngFor="let dia of septiembre">
           <tr
             [ngClass]="{
-              'festivo-regional': dia === 11,
-              'festivo-local': dia === 29
+              'festivo-regional': dia === 11
             }"
           >
             {{
@@ -43,10 +39,7 @@
   <table class="bg-light rounded-3">
     <div class="p-5">
       <div class="row row-cols-6">
-        <td
-          *ngFor="let dias of semana"
-          class="text-danger text-center"
-        >
+        <td *ngFor="let dias of semana" class="text-danger text-center">
           <tr>
             {{
               dias
