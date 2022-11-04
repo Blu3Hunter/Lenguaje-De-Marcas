@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,12 +18,14 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::post('register', [UserController::class, 'register']);
-Route::post('login', [UserController::class, 'login']); 
-Route::post('product', [UserController::class, 'insertProduct']); 
+Route::post('login', [UserController::class, 'login']);
+
 
 
 Route::group(['middleware' => ["auth:sanctum"]], function () {
     //rutas
     Route::get('user-profile', [UserController::class, 'userProfile']);
     Route::get('logout', [UserController::class, 'logout']);
+    Route::post('insert-product', [ProductController::class, 'insertProduct']);
+    Route::get('read-product', [ProductController::class, 'readProduct']);
 });

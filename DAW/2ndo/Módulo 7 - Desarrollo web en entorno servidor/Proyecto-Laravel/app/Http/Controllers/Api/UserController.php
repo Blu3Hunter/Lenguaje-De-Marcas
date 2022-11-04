@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
-use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -83,16 +82,6 @@ class UserController extends Controller
         ]);
     }
 
-    public function insertProduct(Request $request){
-        $product = new Product();
-        $product->product_name = $request->product_name;
-        $product->price = $request->price;
-        $product->stock = $request->stock;
-        $product->description = $request->description;
-        $product->save();
-        
-
-    }
 
 
 
