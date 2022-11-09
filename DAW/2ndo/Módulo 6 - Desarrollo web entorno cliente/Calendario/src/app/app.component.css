@@ -1,14 +1,14 @@
-.festivo-nacional{
-    color: #49E37C;
+.festivo_nacional{
+    background-color: #49E37C;
 }
-.festivo-regional{
-    color: #7A65D6;
+.festivo_regional{
+    background-color: #7A65D6;
 }
-.festivo-local{
-    color: #E14DB0;
+.festivo_local{
+    background-color: #E14DB0;
 }
-.festivo-centro{
-    color: #CAE252;
+.festivo_centro{
+    background-color: #CAE252;
 }
 .row-cols-6>* {
     flex: 0 0 auto !important;

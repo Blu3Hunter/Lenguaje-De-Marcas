@@ -12,24 +12,29 @@
     <div class="p-5">
       <div class="row row-cols-6">
         <td *ngFor="let dias of semana" class="text-danger text-center">
-          <tr>
+          <div>
             {{
               dias
             }}
-          </tr>
+          </div>
         </td>
       </div>
       <div class="row row-cols-6">
         <td *ngFor="let dia of septiembre">
-          <tr
+          <div
             [ngClass]="{
-              'festivo-regional': dia === 11
+              festivo_regional:
+                setFestive(dia, 'septiembre') == 'fiestaRegional',
+              festivo_nacional:
+                setFestive(dia, 'septiembre') == 'fiestaNacional',
+              festivo_local: setFestive(dia, 'septiembre') == 'fiestaLocal',
+              festivo_centro: setFestive(dia, 'septiembre') == 'fiestaCentro'
             }"
           >
             {{
               dia
             }}
-          </tr>
+          </div>
         </td>
       </div>
     </div>
@@ -40,25 +45,31 @@
     <div class="p-5">
       <div class="row row-cols-6">
         <td *ngFor="let dias of semana" class="text-danger text-center">
-          <tr>
+          <div>
             {{
               dias
             }}
-          </tr>
+          </div>
         </td>
       </div>
       <div class="row row-cols-6">
+
+        <div>
+          
+        </div>
         <td *ngFor="let dia of octubre">
-          <tr
+          <div
             [ngClass]="{
-              'festivo-regional': dia === 11,
-              'festivo-local': dia === 29
+              festivo_regional: setFestive(dia, 'octubre') == 'fiestaRegional',
+              festivo_nacional: setFestive(dia, 'octubre') == 'fiestaNacional',
+              festivo_local: setFestive(dia, 'octubre') == 'fiestaLocal',
+              festivo_centro: setFestive(dia, 'octubre') == 'fiestaCentro'
             }"
           >
             {{
               dia
             }}
-          </tr>
+          </div>
         </td>
       </div>
     </div>
@@ -66,8 +77,8 @@
 </div>
 
 <div class="d-flex flex-row mb-3 gap-5 justify-content-center mt-5">
-  <div class="p-2" [ngStyle]="{ color: '#49E37C' }">Festiu National</div>
-  <div class="p-2" [ngStyle]="{ color: '#7A65D6' }">Festiu Regional</div>
-  <div class="p-2" [ngStyle]="{ color: '#E14DB0' }">Festiu Local</div>
-  <div class="p-2" [ngStyle]="{ color: '#CAE252' }">Festiu Centre</div>
+  <div class="p-2" [ngStyle]="{ color: '#49E37C' }">Festivo National</div>
+  <div class="p-2" [ngStyle]="{ color: '#7A65D6' }">Festivo Regional</div>
+  <div class="p-2" [ngStyle]="{ color: '#E14DB0' }">Festivo Local</div>
+  <div class="p-2" [ngStyle]="{ color: '#CAE252' }">Festivo Centre</div>
 </div>
