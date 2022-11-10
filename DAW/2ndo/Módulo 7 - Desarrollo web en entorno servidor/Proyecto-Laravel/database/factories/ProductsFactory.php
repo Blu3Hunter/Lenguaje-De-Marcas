@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Product>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Products>
  */
-class ProductFactory extends Factory
+class ProductsFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,6 +19,7 @@ class ProductFactory extends Factory
         return [
             'product_name' => fake()->word(),
             'description' => fake()->realText(),
+            'category' => fake()->realText(),
             'price' => rand(1, 99),
             'stock' => rand(1, 999),
         ];

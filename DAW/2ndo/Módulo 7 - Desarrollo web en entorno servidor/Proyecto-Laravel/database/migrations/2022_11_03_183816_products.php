@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('price');
             $table->integer('stock');
             $table->string('description');
+            $table->string('category');
             $table->timestamps();
         });
     }

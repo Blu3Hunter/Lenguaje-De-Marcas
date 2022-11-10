@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Product extends Authenticatable
+class Products extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -17,6 +17,7 @@ class Product extends Authenticatable
         'price',
         'stock',
         'description',
+        'category',
     ];
 
 

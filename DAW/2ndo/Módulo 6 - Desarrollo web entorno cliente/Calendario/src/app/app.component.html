@@ -13,9 +13,7 @@
       <div class="row row-cols-6">
         <td *ngFor="let dias of semana" class="text-danger text-center">
           <div>
-            {{
-              dias
-            }}
+            {{ dias }}
           </div>
         </td>
       </div>
@@ -31,9 +29,7 @@
               festivo_centro: setFestive(dia, 'septiembre') == 'fiestaCentro'
             }"
           >
-            {{
-              dia
-            }}
+            {{ dia }}
           </div>
         </td>
       </div>
@@ -45,18 +41,11 @@
     <div class="p-5">
       <div class="row row-cols-6">
         <td *ngFor="let dias of semana" class="text-danger text-center">
-          <div>
-            {{
-              dias
-            }}
-          </div>
+          {{ dias }}
         </td>
       </div>
       <div class="row row-cols-6">
-
-        <div>
-          
-        </div>
+        <div></div>
         <td *ngFor="let dia of octubre">
           <div
             [ngClass]="{
@@ -66,9 +55,7 @@
               festivo_centro: setFestive(dia, 'octubre') == 'fiestaCentro'
             }"
           >
-            {{
-              dia
-            }}
+            {{ dia }}
           </div>
         </td>
       </div>

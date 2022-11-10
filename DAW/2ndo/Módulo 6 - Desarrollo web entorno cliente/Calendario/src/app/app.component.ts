@@ -95,20 +95,13 @@ export class AppComponent {
     return '';
   }
 
-  monthDay(){
-    for(let i = 0; i < this.octubre.length; i++){
-      
-    }
-  }
-
-
 }
 
-type diasFestivos = Array<{ day: number; month: string; days: number,festive: string }>;
+type diasFestivos = Array<{ day: number; month: string; festive: string }>;
 
 const festivos: diasFestivos = [
-  { day: 12, month: 'octubre', days: 31, festive: 'fiestaNacional' },
-  { day: 31, month: 'octubre', days: 31,festive: 'fiestaCentro' },
-  { day: 11, month: 'septiembre',days: 30, festive: 'fiestaRegional' },
-  { day: 29, month: 'septiembre', days: 30,festive: 'fiestaLocal' },
+  { day: 12, month: 'octubre', festive: 'fiestaNacional' },
+  { day: 31, month: 'octubre', festive: 'fiestaCentro' },
+  { day: 11, month: 'septiembre', festive: 'fiestaRegional' },
+  { day: 29, month: 'septiembre', festive: 'fiestaLocal' },
 ];
