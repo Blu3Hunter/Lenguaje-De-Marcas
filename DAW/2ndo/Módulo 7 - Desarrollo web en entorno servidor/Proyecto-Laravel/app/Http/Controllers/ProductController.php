@@ -28,13 +28,15 @@ class ProductController extends Controller
     public function readProduct(Request $request)
 
     {
+        $products = new Products();
+        $products->product_category = $request->category;
 
-        // return Products::get()->where('category', '=' ,$request);
-        return Products::where('category', '=', $request)->get();
+        return Products::where('category', '=', $products->product_category,)->get();
     }
 
     public function uploadProduct()
     {
+        
     }
 
 
