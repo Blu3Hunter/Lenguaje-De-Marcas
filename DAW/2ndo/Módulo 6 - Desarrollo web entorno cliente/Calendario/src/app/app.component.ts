@@ -47,6 +47,7 @@ export class AppComponent {
       29,
       30,
     ];
+    
     this.octubre = [
       '',
       '',

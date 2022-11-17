@@ -36,7 +36,7 @@ class ProductController extends Controller
 
     }
 
-    public function uploadProduct(Request $request)
+    public function updateProduct(Request $request)
     {
         $products = new Products();
         $products->id = $request->id;

@@ -24,10 +24,18 @@ Route::post('login', [UserController::class, 'login']);
 
 Route::group(['middleware' => ["auth:sanctum"]], function () {
     //rutas
+
+    //get
     Route::get('user-profile', [UserController::class, 'userProfile']);
     Route::get('logout', [UserController::class, 'logout']);
-    Route::post('insert-product', [ProductController::class, 'insertProduct']);
     Route::get('read-product', [ProductController::class, 'readProduct']);
+
+
+    //post
+    Route::post('insert-product', [ProductController::class, 'insertProduct']);
     Route::post('delete-product', [ProductController::class, 'deleteProduct']);
-    Route::post('upload-product', [ProductController::class, 'uploadProduct']);
+    Route::post('update-product', [ProductController::class, 'updateProduct']);
+
+
+    
 });
