@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Products;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class CategoryController extends Controller
 {
 
-    public function insertProduct(Request $request)
+    public function insertCategory(Request $request)
     {
-        $products = new Products();
+        $products = new Category();
         $products->product_name = $request->product_name;
         $products->price = $request->price;
         $products->stock = $request->stock;
@@ -18,32 +19,33 @@ class ProductController extends Controller
         $products->category = $request->category;
         $products->save();
 
-        return response()->json([
+        return response()->json([ 
             "status" => 1,
             "msg" => "¡El producto $products->product_name ha sido registrado correctamente!",
         ]);
     }
 
-    public function readProduct(Request $request)
+    public function readCategory(Request $request)
 
     {
-        $products = new Products();
+
+        $products = new Category();
         $products->category = $request->category;
 
-        return Products::where('category', '=', $products->category)->get();
+        return Category::where('category', '=', $products->category)->get();
 
     }
 
-    public function updateProduct(Request $request)
+    public function updateCategory(Request $request)
     {
-        $products = new Products();
+        $products = new Category();
         $products->id = $request->id;
         $products->product_name = $request->product_name;
         $products->price = $request->price;
         $products->stock = $request->stock;
         $products->description = $request->description;
         $products->category = $request->category;
-        $products = Products::find($products->id);
+        $products = Category::find($products->id);
         $products->update([
             'product_name' => $request->product_name,
             'price' => $request->price,
@@ -58,10 +60,10 @@ class ProductController extends Controller
         ]);
     }
 
-    public function deleteProduct(Request $request)
+    public function deleteCategory(Request $request)
     {
-        $products = new Products();
+        $products = new Category();
         $products->id = $request->id;
-        if ($products = Products::find($products)) return Products::destroy($products);
+        if ($products = Category::find($products)) return Products::destroy($products);
     }
 }
