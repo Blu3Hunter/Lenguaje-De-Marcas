@@ -12,16 +12,13 @@ class CategoryController extends Controller
     public function insertCategory(Request $request)
     {
         $products = new Category();
-        $products->product_name = $request->product_name;
-        $products->price = $request->price;
-        $products->stock = $request->stock;
-        $products->description = $request->description;
+
         $products->category = $request->category;
         $products->save();
 
         return response()->json([ 
             "status" => 1,
-            "msg" => "¡El producto $products->product_name ha sido registrado correctamente!",
+            "msg" => "¡La categoria $products->category ha sido registrada correctamente!",
         ]);
     }
 
@@ -39,21 +36,15 @@ class CategoryController extends Controller
     public function updateCategory(Request $request)
     {
         $products = new Category();
-        $products->id = $request->id;
-        $products->product_name = $request->product_name;
-        $products->price = $request->price;
-        $products->stock = $request->stock;
-        $products->description = $request->description;
+
         $products->category = $request->category;
         $products = Category::find($products->id);
         $products->update([
-            'product_name' => $request->product_name,
-            'price' => $request->price,
-            'stock' => $request->stock,
-            'description' => $request->description,
+        
             'category' => $request->category,
 
         ]);
+        
         return response()->json([
             "status" => 1,
             "msg" => "¡El producto $products->product_name ha sido modificado correctamente!",
@@ -66,4 +57,5 @@ class CategoryController extends Controller
         $products->id = $request->id;
         if ($products = Category::find($products)) return Products::destroy($products);
     }
+    
 }

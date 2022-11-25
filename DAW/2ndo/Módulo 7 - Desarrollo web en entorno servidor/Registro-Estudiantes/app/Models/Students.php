@@ -8,12 +8,16 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Category extends Authenticatable
+class Students extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
     protected $fillable = [
-        'category',
+        'name',
+        'surnames',
+        'dni',
+        'course',
     ];
+
 
 }
