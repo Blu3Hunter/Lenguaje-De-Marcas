@@ -1,13 +1,17 @@
-<div class="card" style="width: 18rem" *ngFor="let tarea of tareas">
-  <img src="{{tarea.img}}" class="card-img-top" alt="..." />
-  <div class="card-body">
-    <h5 class="card-title">{{tarea.titulo}}</h5>
-    <p class="card-text">
-      {{tarea.fechaFin}}
+<div class="card" style="width: 25rem">
+  <img [src]="tarea.img" class="card-img-top" />
+  <div class="card-body p-5">
+    <h5 class="card-title">{{ tarea.titulo }}</h5>
+    <div class="d-flex flex-row gap-2">
+
+      <div *ngFor="let usuario of tarea.usuarios" class="mt-2">
+        <img class="rounded-circle " style="width: 50px;"
+        alt="Avatar"src="{{ usuario.img }}"/>
+      </div>
+    </div>
+
+    <p class="card-text mt-2">
+      {{ tarea.fechaFin }}
     </p>
-    <p class="card-text">
-      {{tarea.usuarios}}
-    </p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
