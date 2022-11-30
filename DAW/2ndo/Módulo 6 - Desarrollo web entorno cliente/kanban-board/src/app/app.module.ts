@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TareaComponent } from './tarea/tarea.component';
 
+import * as moment from 'moment';
 
 @NgModule({
   declarations: [

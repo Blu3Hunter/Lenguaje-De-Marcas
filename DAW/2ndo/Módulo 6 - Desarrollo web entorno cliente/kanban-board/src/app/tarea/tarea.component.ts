@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Tarea } from '../models/tarea-model';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-tarea',
@@ -7,7 +8,6 @@ import { Tarea } from '../models/tarea-model';
   styleUrls: ['./tarea.component.css'],
 })
 export class TareaComponent implements OnInit {
-  tareas!: Tarea;
   @Input() tarea: Tarea;
   constructor() {
     this.tarea = {
@@ -19,5 +19,23 @@ export class TareaComponent implements OnInit {
     };
   }
 
+  fechas(fechaFin: any) {
+
+    var today = moment();
+    var momentB = moment(fechaFin, 'YYYY-MM-DD');
+
+    var red = 'red'
+    var orange = 'orange'
+    var gray = 'gray'
+
+
+    if (today > momentB && this.tarea.lista == 'Finalizadas') {
+      return red;
+    } else if (today < momentB && this.tarea.lista == 'Progreso') {
+      return orange;
+    } else {
+      return gray;
+    }
+  }
   ngOnInit(): void {}
 }

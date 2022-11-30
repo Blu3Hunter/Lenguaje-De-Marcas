@@ -5,12 +5,12 @@
     <div class="d-flex flex-row gap-2">
 
       <div *ngFor="let usuario of tarea.usuarios" class="mt-2">
-        <img class="rounded-circle " style="width: 50px;"
+        <img class="rounded-circle " style="width: 40px;"
         alt="Avatar"src="{{ usuario.img }}"/>
       </div>
     </div>
 
-    <p class="card-text mt-2">
+    <p class="card-text mt-2" [ngClass]="fechas(tarea.fechaFin)">
       {{ tarea.fechaFin }}
     </p>
   </div>
