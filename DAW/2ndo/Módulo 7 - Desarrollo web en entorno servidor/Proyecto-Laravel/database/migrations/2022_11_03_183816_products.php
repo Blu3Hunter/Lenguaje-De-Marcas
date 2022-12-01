@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('description');
-            $table->integer('price');
+            $table->float('price');
             $table->boolean('stock');
             $table->unsignedInteger('category');
 
