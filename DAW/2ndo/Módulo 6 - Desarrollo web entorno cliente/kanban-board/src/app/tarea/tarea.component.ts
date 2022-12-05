@@ -11,23 +11,22 @@ export class TareaComponent implements OnInit {
   @Input() tarea: Tarea;
   constructor() {
     this.tarea = {
+      id: 0,
       lista: '',
       img: '',
       titulo: '',
-      usuarios: [{ img: '', alt: '' }],
+      usuarios: [{ img: '', alt: '', email: '', nick: '' }],
       fechaFin: new Date(),
     };
   }
 
   fechas(fechaFin: any) {
-
     var today = moment();
     var momentB = moment(fechaFin, 'YYYY-MM-DD');
 
-    var red = 'red'
-    var orange = 'orange'
-    var gray = 'gray'
-
+    var red = 'red';
+    var orange = 'orange';
+    var gray = 'gray';
 
     if (today > momentB && this.tarea.lista == 'Finalizadas') {
       return red;
