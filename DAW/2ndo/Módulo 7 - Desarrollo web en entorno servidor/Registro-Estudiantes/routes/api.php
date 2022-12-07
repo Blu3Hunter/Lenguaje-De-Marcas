@@ -1,41 +1,65 @@
 <?php
 
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\StudentController;
+use App\Http\Controllers\Api\ProfessorController;
+use App\Http\Controllers\Api\CourseController;
+use App\Http\Controllers\Courses;
 use App\Http\Controllers\Students;
+use App\Http\Controllers\Teachers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
+
+// USER
+
+route::post('register', [UserController::class, 'register']); // REGISTRO USER
+route::post('login', [UserController::class, 'login']); // LOGIN USER
+
+
+Route::group(['middleware' => ["auth:sanctum"]], function () { // AUTH USER (Se necesita un token válido)
 
 
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+
+    Route::get('user-profile', [UserController::class, 'userProfile']);
+    Route::get('logout', [UserController::class, 'logout']);
+    Route::post('readUser', [UserController::class, 'readUser']);
+
+    Route::group(['middleware' => ['permission:student-admin']], function () { // PERMISO MODIFICAR STUDENT
+        Route::post('insertStudent', [Students::class, 'insertStudent']);
+        Route::post('deleteStudent', [Students::class, 'deleteStudent']);
+        Route::post('updateStudent', [Students::class, 'updateStudent']);
+    });
+
+    Route::group(['middleware' => ['permission:read-student']], function () { // PERMISO LEER STUDENT
+        Route::post('readStudent', [Students::class, 'readStudent']);
+    });
 
 
-Route::post('register', [UserController::class, 'register']);
-Route::post('login', [UserController::class, 'login']);
-
-Route::group(['middleware' => ["auth:sanctum"]], function () {
-
-    //POST
-
-    Route::post('insert-student', [Students::class, 'insertStudent']);
-    Route::post('update-student', [Students::class, 'updateSudent']);
-    Route::post('delete-student', [Students::class, 'deleteStudent']);
+    Route::group(['middleware' => ['permission:course-admin']], function () { // PERMISO MODIFICAR COURSE
+        Route::post('insertCourse', [Courses::class, 'insertCourse']);
+        Route::post('deleteCourse', [Courses::class, 'deleteCourse']);
+        Route::post('updateCourse', [Courses::class, 'updateCourse']);
+    });
+    Route::group(['middleware' => ['permission:read-course']], function () { // PERMISO LEER CURSO
+        Route::post('readCourse', [Courses::class, 'readCourse']);
+    });
 
 
-    //GET
+    Route::group(['middleware' => ['permission:teacher-admin']], function () { // PERMISO MODIFICAR PROFESSOR
+        Route::post('insertTeacher', [Teachers::class, 'insertTeacher']);
+        Route::post('deleteTeacher', [Teachers::class, 'deleteTeacher']);
+        Route::post('updateTeacher', [Teachers::class, 'updateTeacher']);
+    });
+    Route::group(['middleware' => ['permission:read-teacher']], function () { // PERMISO LEER PROFESSOR
+        Route::post('readTeacher', [Teachers::class, 'readTeacher']);
+    });
 
-    Route::get('read-student', [Students::class, 'readStudent']);
+
+
+});
+
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
 });

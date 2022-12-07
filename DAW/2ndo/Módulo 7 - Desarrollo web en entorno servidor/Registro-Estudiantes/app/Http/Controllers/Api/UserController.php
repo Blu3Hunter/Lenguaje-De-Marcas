@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Students;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -80,4 +81,12 @@ class UserController extends Controller
             "msg" => "Cierre de Sesión",
         ]);
     }
+
+    public function readUser()
+
+    {
+        return User::all();
+    }
+
+    
 }

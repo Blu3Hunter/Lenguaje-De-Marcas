@@ -21,13 +21,14 @@ class Students extends Controller
             "msg" => "¡El estudiante $students->name ha sido registrado correctamente!",
         ]);
     }
-
+    
     public function readStudent()
 
     {
         return ModelsStudents::all();
     }
 
+   
     public function updateSudent(Request $request)
     {
         $students = new ModelsStudents();
