@@ -20,8 +20,6 @@ return new class extends Migration
             $table->string('surnames');
             $table->string('dni');
             $table->unsignedInteger('student_course');
-            
-
             $table->foreign('student_course')->references('id_course')->on('courses');
 
         });

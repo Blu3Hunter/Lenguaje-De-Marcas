@@ -14,6 +14,4 @@ class Courses extends Model
         'teacher_course', 
     ];
 
-
-
 }
