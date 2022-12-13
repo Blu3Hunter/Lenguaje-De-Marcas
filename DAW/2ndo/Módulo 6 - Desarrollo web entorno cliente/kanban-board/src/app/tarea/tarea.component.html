@@ -1,18 +1,24 @@
 <div class="card" style="width: 25rem">
-  <img [src]="tarea.img" class="card-img-top" />
+  <img [src]="tarea.img" class="card-img-top"/>
   <div class="card-body p-5">
     <h5 class="card-title">{{ tarea.titulo }}</h5>
     <div class="d-flex flex-row gap-2">
-
       <div *ngFor="let usuario of tarea.usuarios" class="mt-2">
-        <img class="rounded-circle " style="width: 40px;"
-        alt="Avatar"src="{{ usuario.img }}"/>
+
+        <img
+          class="rounded-circle"
+          style="width: 40px"
+          alt="{{usuario.alt}}"
+          src="{{usuario.img}}"
+          matTooltip="{{usuario.nick}}"
+        />
+
       </div>
     </div>
 
     <p class="card-text mt-2" [ngClass]="fechas(tarea.fechaFin)">
       {{ tarea.fechaFin }}
     </p>
+
   </div>
 </div>
-<app-tarea-component></app-tarea-component>

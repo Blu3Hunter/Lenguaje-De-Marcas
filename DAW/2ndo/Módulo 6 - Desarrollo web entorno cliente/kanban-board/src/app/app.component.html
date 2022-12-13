@@ -1,8 +1,14 @@
-<div *ngFor="let lista of listas" class="mt-5">
-  <h1 class="text-center ">{{lista}}</h1>
-  <div class="d-flex flex-row justify-content-center" *ngFor="let tarea of tareas; index as i">
-    
-    <app-tarea *ngIf="tarea.lista == lista" class="p-5" [tarea]="tareas[i]"></app-tarea>
-
+<div *ngIf="visible">
+  <div *ngFor="let lista of listas" class="mt-5">
+    <h1 class="text-center ">{{lista}}</h1>
+    <div class="d-flex flex-row justify-content-center" *ngFor="let tarea of tareas; index as i">
+      
+      <app-tarea *ngIf="tarea.lista == lista" class="p-5" [tarea]="tareas[i]"></app-tarea>
+  
+    </div>
   </div>
 </div>
+
+<button type="button" class="mt-2 btn btn-primary" (click)="test()"><i class="bi bi-plus"></i>Añadir tarea nueva</button>
+
+<app-tarea-form *ngIf="visible == false"></app-tarea-form>

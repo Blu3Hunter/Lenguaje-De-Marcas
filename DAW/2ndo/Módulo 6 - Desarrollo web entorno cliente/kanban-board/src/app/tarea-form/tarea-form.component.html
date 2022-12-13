@@ -1,0 +1,32 @@
+<div class="d-flex flex-column container card p-5 shadow mb-5 bg-body rounded">
+  <mat-form-field appearance="fill" class="rounded-5">
+    <mat-label>Titulo</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Progreso</mat-label>
+    <mat-select>
+      <mat-option value="pendientes">Pendientes</mat-option>
+      <mat-option value="Progreso">Progreso</mat-option>
+      <mat-option value="Finalizadas">Finalizadas</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Elije una fecha</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>URL Imágen</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <div class="d-flex flex-column gap-3">
+    <button type="button" class="mt-2 btn btn-primary"><i class="bi bi-plus"></i></button>
+    <button type="button" class="btn btn-primary"><i class="bi bi-download"></i> Guardar</button>
+    <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i> Cancelar</button>
+  </div>
+
+
+</div>

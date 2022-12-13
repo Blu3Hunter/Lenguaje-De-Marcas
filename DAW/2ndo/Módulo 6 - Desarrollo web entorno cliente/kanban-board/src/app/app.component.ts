@@ -14,6 +14,10 @@ export class AppComponent {
   listas: string[] = [];
   tareas: Tarea[];
 
+
+  //hiding info box
+  visible = true
+
   constructor() {
     const tareasJSON: string = `{
       "tareas": [
@@ -41,5 +45,14 @@ export class AppComponent {
     this.listas.push(k_PENDIENTES_LISTA);
     this.listas.push(k_PROGRESO_LISTA);
     this.listas.push(k_FINALIZADAS_LISTA);
+
+
   }
+
+  test() {
+    this.visible = false
+  }
+
+
+
 }
