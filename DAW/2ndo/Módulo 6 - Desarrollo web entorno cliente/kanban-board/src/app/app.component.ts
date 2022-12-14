@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Tarea } from './models/tarea-model';
 
 const k_PENDIENTES_LISTA: string = 'Pendientes';
@@ -11,12 +11,13 @@ const k_FINALIZADAS_LISTA: string = 'Finalizadas';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  
+
   listas: string[] = [];
   tareas: Tarea[];
 
-
   //hiding info box
-  visible = true
+  visible = true;
 
   constructor() {
     const tareasJSON: string = `{
@@ -45,14 +46,13 @@ export class AppComponent {
     this.listas.push(k_PENDIENTES_LISTA);
     this.listas.push(k_PROGRESO_LISTA);
     this.listas.push(k_FINALIZADAS_LISTA);
-
-
   }
 
-  test() {
-    this.visible = false
+  test(a: any) {
+    if (this.visible) {
+      return (this.visible = false);
+    } else {
+      return (this.visible = true);
+    }
   }
-
-
-
 }
