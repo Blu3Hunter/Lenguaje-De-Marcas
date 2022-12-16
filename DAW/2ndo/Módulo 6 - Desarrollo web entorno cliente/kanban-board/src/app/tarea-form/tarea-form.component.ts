@@ -9,7 +9,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./tarea-form.component.css'],
 })
 export class TareaComponentComponent {
-  @Output() cancelarTarea = new EventEmitter<boolean>();
+
+
+  @Output() cancelTaskEmmiter = new EventEmitter<boolean>();
 
   @Output() guardarForm: EventEmitter<string> = new EventEmitter<string>();
 
@@ -26,7 +28,18 @@ export class TareaComponentComponent {
       this.guardarForm.emit(JSON.stringify(this.taskForm.value));
     }
   }
-  cancelarTareaEstado() {
-    this.cancelarTarea.emit(true);
+
+
+  cancelTask() {
+    this.cancelTaskEmmiter.emit(true);
   }
+
+
+
+  cositas() {
+    
+
+    
+  }
+
 }

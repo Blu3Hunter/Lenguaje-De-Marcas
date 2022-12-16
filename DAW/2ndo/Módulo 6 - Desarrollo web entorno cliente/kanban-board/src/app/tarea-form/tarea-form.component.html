@@ -36,7 +36,7 @@
     <div class="d-flex flex-row-reverse">
       <div class="p-2">
         <button type="button" class="mt-2 btn btn-info rounded-circle">
-          <i class="bi bi-plus"></i>
+          <i class="bi bi-plus text-white fs-3" (click)="cositas()"></i>
         </button>
       </div>
     </div>
@@ -53,7 +53,7 @@
       <button
         type="button"
         class="btn btn-danger"
-        (click)="cancelarTareaEstado()"
+        (click)="cancelTask()"
       >
         <i class="bi bi-trash"></i> Cancelar
       </button>
