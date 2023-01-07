@@ -9,7 +9,7 @@ import { User } from './models/user-model';
 export class AppComponent {
   title = 'MiRedSocial';
   users: User[] = [];
-  flag: boolean = false;
+  estado: boolean = false;
   nom: any = this.users;
   counter: number = 0;
   constructor() {
@@ -31,6 +31,7 @@ export class AppComponent {
       "correu": "pponas@gmail.com",
       "clau": "123456"
       }
+      ]
       }`;
 
     const UsersDict: any = JSON.parse(UsersJSON);
@@ -40,23 +41,23 @@ export class AppComponent {
   // Registrar usuario
   upload(nuevoUsuario: any) {
     this.counter = 0;
-    this.flag = false;
+    this.estado = false;
     this.users.push(nuevoUsuario);
   }
 
-  changeFlag() {
-    this.flag = !this.flag;
+  cambiarEstado() {
+    this.estado = !this.estado;
   }
 
-  hideData() {
-    return (this.flag = false);
+  ocultar() {
+    return (this.estado = false);
   }
 
-  showData() {
-    return (this.flag = true);
+  mostrar() {
+    return (this.estado = true);
   }
 
-  increaseCounterer() {
+  contador() {
     this.counter++;
   }
 }

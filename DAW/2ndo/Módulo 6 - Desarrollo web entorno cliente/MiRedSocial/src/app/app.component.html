@@ -1,17 +1,23 @@
-<div *ngIf="flag == false">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand mx-auto" href="#">MiRedSocial</a>
+</nav>
+
+
+<div *ngIf="estado == false">
   <div class="d-flex flex-row gap-3 p-5">
     <div *ngFor="let eq of users">
       <app-listausuarios [item]="users[counter]"> </app-listausuarios>
-      {{ increaseCounterer() }}
+      {{ contador() }}
     </div>
   </div>
-  <div class="d-flex flex-row">
-    <button class="pl-5 btn btn-success" (click)="changeFlag()">
+  <div class="d-flex mx-auto">
+    <button class="btn btn-success mx-auto mt-3" (click)="cambiarEstado()">
       Crear usuario
     </button>
   </div>
+  
 </div>
 
-<div *ngIf="flag">
+<div *ngIf="estado">
   <app-registrousuarios (nuevoUsuario)="upload($event)"></app-registrousuarios>
 </div>
