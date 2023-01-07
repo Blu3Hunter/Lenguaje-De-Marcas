@@ -1,11 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
   FormControl,
   FormGroup,
-  ValidationErrors,
-  ValidatorFn,
   Validators,
 } from '@angular/forms';
 
@@ -15,9 +13,10 @@ import {
   styleUrls: ['./registrousuarios.component.css'],
 })
 export class RegistrousuariosComponent implements OnInit {
-  resultado!: string;
   isSubmit: boolean = false;
   constructor(private fb: FormBuilder) {}
+
+  @Output() nuevoUsuario = new EventEmitter<any>();
 
   ngOnInit(): void {}
 
@@ -27,19 +26,19 @@ export class RegistrousuariosComponent implements OnInit {
 
   registrarUsuario = this.fb.group(
     {
-      nombre: new FormControl('', [Validators.required]),
-      apellido: new FormControl('', [Validators.required]),
-      edad: new FormControl('', [Validators.required]),
-      descripcion: new FormControl('', [
+      nom: new FormControl('', [Validators.required]),
+      cognoms: new FormControl('', [Validators.required]),
+      edat: new FormControl('', [Validators.required]),
+      descripcio: new FormControl('', [
         Validators.required,
         Validators.minLength(4),
       ]),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [Validators.required]),
-      passwordMatch: new FormControl('', [Validators.required]),
+      correu: new FormControl('', [Validators.required, Validators.email]),
+      clau: new FormControl('', [Validators.required]),
+      clauMatch: new FormControl('', [Validators.required]),
     },
     {
-      validator: this.ConfirmedValidator('password', 'passwordMatch'),
+      validator: this.ConfirmedValidator('clau', 'clauMatch'),
     }
   );
 
@@ -84,14 +83,13 @@ export class RegistrousuariosComponent implements OnInit {
 
   submit() {
     this.isSubmit = true;
-    console.log(this.registrarUsuario.value);
+
     if (this.registrarUsuario.valid) {
-      return alert('esta todo bien illo');
+      console.log(this.registrarUsuario.value);
+      // return alert('esta todo bien illo');
+      // this.listas.push(k_PENDIENTES_LISTA);
+      this.nuevoUsuario.emit(this.registrarUsuario.value);
     } else {
-      return alert('onde vas loco, hay algo mal...');
     }
   }
-
-
-
 }

@@ -6,4 +6,5 @@ export interface User {
   descripcio: string;
   correu: string;
   clau: string;
+  clauMatch: string;
 }

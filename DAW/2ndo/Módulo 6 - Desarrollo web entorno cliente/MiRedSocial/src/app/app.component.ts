@@ -24,30 +24,6 @@ export class AppComponent {
       "clau": "123456"
       },
       {
-      "nom": "alejandro",
-      "cognoms": "Porras",
-      "edat": 25,
-      "descripcio": "Soltero super guapo y morenote",
-      "correu": "pporras@gmail.com",
-      "clau": "123456"
-      },
-      {
-      "nom": "Pere",
-      "cognoms": "Porras",
-      "edat": 25,
-      "descripcio": "Soltero super guapo y morenote",
-      "correu": "pporras@gmail.com",
-      "clau": "123456"
-      },
-      {
-      "nom": "alejandro",
-      "cognoms": "Porras",
-      "edat": 25,
-      "descripcio": "Soltero super guapo y morenote",
-      "correu": "pporras@gmail.com",
-      "clau": "123456"
-      },
-      {
       "nom": "Pilar",
       "cognoms": "Ponas",
       "edat": 18,
@@ -55,24 +31,32 @@ export class AppComponent {
       "correu": "pponas@gmail.com",
       "clau": "123456"
       }
-      ]
       }`;
 
     const UsersDict: any = JSON.parse(UsersJSON);
     this.users = UsersDict['usuaris'];
   }
 
-  // cambia el flag para que muestre un panel o otro
+  // Registrar usuario
+  upload(nuevoUsuario: any) {
+    this.counter = 0;
+    this.flag = false;
+    this.users.push(nuevoUsuario);
+  }
 
-  increaseCounterer() {
-    this.counter++;
+  changeFlag() {
+    this.flag = !this.flag;
+  }
+
+  hideData() {
+    return (this.flag = false);
   }
 
   showData() {
     return (this.flag = true);
   }
-  // cambia el flag para que muestre un panel o otro
-  hideData() {
-    return (this.flag = false);
+
+  increaseCounterer() {
+    this.counter++;
   }
 }

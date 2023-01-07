@@ -1,13 +1,17 @@
 <div *ngIf="flag == false">
-  <div class="cardsFlex">
-    <div class="cards" *ngFor="let eq of users">
+  <div class="d-flex flex-row gap-3 p-5">
+    <div *ngFor="let eq of users">
       <app-listausuarios [item]="users[counter]"> </app-listausuarios>
       {{ increaseCounterer() }}
-      <!-- esto esta asi porque no me deja meter eq en Users[] ya que me dice : El tipo 'Usuario' no se puede utilizar como tipo de índice -->
     </div>
+  </div>
+  <div class="d-flex flex-row">
+    <button class="pl-5 btn btn-success" (click)="changeFlag()">
+      Crear usuario
+    </button>
   </div>
 </div>
 
-<div *ngIf="flag == true">pene</div>
-
-<app-registrousuarios></app-registrousuarios>
+<div *ngIf="flag">
+  <app-registrousuarios (nuevoUsuario)="upload($event)"></app-registrousuarios>
+</div>

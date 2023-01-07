@@ -1,11 +1,19 @@
-<div class="card" style="width: 18rem">
-  <img rc="https://picsum.photos/600/600" class="card-img-top" alt="..." />
-  <div class="card-body">
-    <h5 class="card-title">
-      {{ item.nom }}, {{ item.cognoms }}, {{ item.edat }}
-    </h5>
-    <p class="card-text">
-      {{ item.descripcio }}
-    </p>
+<div class="d-flex flex-column">
+
+
+  <div class="card " style="width: 18rem">
+    <img src="https://picsum.photos/300/300" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">
+      {{ item.nom }} {{ item.cognoms }}, {{ item.edat }}
+      </h5>
+      <p class="card-text">
+        {{ item.descripcio }}
+      </p>
+      <button class="btn btn-primary">Editar usuario</button>
+    </div>
   </div>
+
+
+
 </div>

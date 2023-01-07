@@ -5,16 +5,16 @@
       type="text"
       class="form-control"
       placeholder="Introduce tu nombre de usuario"
-      formControlName="nombre"
+      formControlName="nom"
       required
-      [ngClass]="{ 'is-invalid': isSubmit && formControl['nombre'].errors }"
+      [ngClass]="{ 'is-invalid': isSubmit && formControl['nom'].errors }"
     />
 
     <div
-      *ngIf="isSubmit && formControl['nombre'].errors"
+      *ngIf="isSubmit && formControl['nom'].errors"
       class="invalid-feedback"
     >
-      <div *ngIf="formControl['nombre'].errors['required']">
+      <div *ngIf="formControl['nom'].errors['required']">
         Debes poner tu nombre de usuario.
       </div>
     </div>
@@ -26,16 +26,16 @@
       type="text"
       class="form-control"
       placeholder="Introduce tus Apellidos"
-      formControlName="apellido"
+      formControlName="cognoms"
       required
-      [ngClass]="{ 'is-invalid': isSubmit && formControl['apellido'].errors }"
+      [ngClass]="{ 'is-invalid': isSubmit && formControl['cognoms'].errors }"
     />
 
     <div
-      *ngIf="isSubmit && formControl['apellido'].errors"
+      *ngIf="isSubmit && formControl['cognoms'].errors"
       class="invalid-feedback"
     >
-      <div *ngIf="formControl['apellido'].errors['required']">
+      <div *ngIf="formControl['cognoms'].errors['required']">
         Debes poner tu apellido.
       </div>
     </div>
@@ -47,16 +47,16 @@
       type="number"
       class="form-control"
       placeholder="Introduce tu edad"
-      formControlName="edad"
+      formControlName="edat"
       required
-      [ngClass]="{ 'is-invalid': isSubmit && formControl['edad'].errors }"
+      [ngClass]="{ 'is-invalid': isSubmit && formControl['edat'].errors }"
     />
 
     <div
-      *ngIf="isSubmit && formControl['edad'].errors"
+      *ngIf="isSubmit && formControl['edat'].errors"
       class="invalid-feedback"
     >
-      <div *ngIf="formControl['edad'].errors['required']">
+      <div *ngIf="formControl['edat'].errors['required']">
         Debes poner tu edad.
       </div>
     </div>
@@ -67,24 +67,23 @@
     <input
       type="text"
       class="form-control"
-      id="exampleInputEmail1"
       aria-describedby="emailHelp"
       placeholder="Describete en pocas palabras"
-      formControlName="descripcion"
+      formControlName="descripcio"
       required
       [ngClass]="{
-        'is-invalid': isSubmit && formControl['descripcion'].errors
+        'is-invalid': isSubmit && formControl['descripcio'].errors
       }"
     />
     <div
-      *ngIf="isSubmit && formControl['descripcion'].errors"
+      *ngIf="isSubmit && formControl['descripcio'].errors"
       class="invalid-feedback"
     >
-      <div *ngIf="formControl['descripcion'].errors['required']">
+      <div *ngIf="formControl['descripcio'].errors['required']">
         Debes poner una breve descripción acerca de ti.
       </div>
 
-      <div *ngIf="formControl['descripcion'].errors['minLength']">
+      <div *ngIf="formControl['descripcio'].errors['minLength']">
         Debes poner una descripción de mínimo 4 carácteres.
       </div>
     </div>
@@ -98,22 +97,22 @@
       id="exampleInputEmail1"
       aria-describedby="emailHelp"
       placeholder="Introduce tu email"
-      formControlName="email"
+      formControlName="correu"
       required
       [ngClass]="{
-        'is-invalid': isSubmit && formControl['email'].errors
+        'is-invalid': isSubmit && formControl['correu'].errors
       }"
     />
 
     <div
-      *ngIf="isSubmit && formControl['email'].errors"
+      *ngIf="isSubmit && formControl['correu'].errors"
       class="invalid-feedback"
     >
-      <div *ngIf="formControl['email'].errors['required']">
+      <div *ngIf="formControl['correu'].errors['required']">
         Debes poner tu email.
       </div>
 
-      <div *ngIf="formControl['email'].errors['email']">
+      <div *ngIf="formControl['correu'].errors['email']">
         Debes poner un correo electrónico válido.
       </div>
     </div>
@@ -126,18 +125,18 @@
       class="form-control"
       id="exampleInputPassword1"
       placeholder="Contraseña"
-      formControlName="password"
+      formControlName="clau"
       required
       [ngClass]="{
-        'is-invalid': isSubmit && formControl['password'].errors
+        'is-invalid': isSubmit && formControl['clau'].errors
       }"
     />
 
     <div
-      *ngIf="isSubmit && formControl['password'].errors"
+      *ngIf="isSubmit && formControl['clau'].errors"
       class="invalid-feedback"
     >
-      <div *ngIf="formControl['password'].errors['required']">
+      <div *ngIf="formControl['clau'].errors['required']">
         Debes poner una contraseña.
       </div>
     </div>
@@ -148,23 +147,22 @@
     <input
       type="password"
       class="form-control"
-      id="exampleInputPassword1"
       placeholder="Contraseña"
-      formControlName="passwordMatch"
+      formControlName="clauMatch"
       required
       [ngClass]="{
-        'is-invalid': isSubmit && formControl['passwordMatch'].errors
+        'is-invalid': isSubmit && formControl['clauMatch'].errors
       }"
     />
 
     <div
-      *ngIf="isSubmit && formControl['passwordMatch'].errors"
+      *ngIf="isSubmit && formControl['clauMatch'].errors"
       class="invalid-feedback"
     >
-      <div *ngIf="formControl['passwordMatch'].errors['required']">
+      <div *ngIf="formControl['clauMatch'].errors['required']">
         Debes poner una contraseña.
       </div>
-      <div *ngIf="formControl['passwordMatch'].errors['confirmedValidator']">
+      <div *ngIf="formControl['clauMatch'].errors['confirmedValidator']">
         Ambas contraseñas deben de ser iguales
       </div>
     </div>
