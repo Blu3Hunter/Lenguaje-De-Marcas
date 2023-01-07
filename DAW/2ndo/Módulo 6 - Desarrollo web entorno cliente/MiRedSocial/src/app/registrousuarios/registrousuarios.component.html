@@ -1,0 +1,176 @@
+<form class="p-5 d-flex flex-column gap-3" [formGroup]="registrarUsuario">
+  <div class="form-group">
+    <label>Nombre de usuario</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Introduce tu nombre de usuario"
+      formControlName="nombre"
+      required
+      [ngClass]="{ 'is-invalid': isSubmit && formControl['nombre'].errors }"
+    />
+
+    <div
+      *ngIf="isSubmit && formControl['nombre'].errors"
+      class="invalid-feedback"
+    >
+      <div *ngIf="formControl['nombre'].errors['required']">
+        Debes poner tu nombre de usuario.
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Apellidos</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Introduce tus Apellidos"
+      formControlName="apellido"
+      required
+      [ngClass]="{ 'is-invalid': isSubmit && formControl['apellido'].errors }"
+    />
+
+    <div
+      *ngIf="isSubmit && formControl['apellido'].errors"
+      class="invalid-feedback"
+    >
+      <div *ngIf="formControl['apellido'].errors['required']">
+        Debes poner tu apellido.
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Edad</label>
+    <input
+      type="number"
+      class="form-control"
+      placeholder="Introduce tu edad"
+      formControlName="edad"
+      required
+      [ngClass]="{ 'is-invalid': isSubmit && formControl['edad'].errors }"
+    />
+
+    <div
+      *ngIf="isSubmit && formControl['edad'].errors"
+      class="invalid-feedback"
+    >
+      <div *ngIf="formControl['edad'].errors['required']">
+        Debes poner tu edad.
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Descripción</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="Describete en pocas palabras"
+      formControlName="descripcion"
+      required
+      [ngClass]="{
+        'is-invalid': isSubmit && formControl['descripcion'].errors
+      }"
+    />
+    <div
+      *ngIf="isSubmit && formControl['descripcion'].errors"
+      class="invalid-feedback"
+    >
+      <div *ngIf="formControl['descripcion'].errors['required']">
+        Debes poner una breve descripción acerca de ti.
+      </div>
+
+      <div *ngIf="formControl['descripcion'].errors['minLength']">
+        Debes poner una descripción de mínimo 4 carácteres.
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Correo electrónico</label>
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="Introduce tu email"
+      formControlName="email"
+      required
+      [ngClass]="{
+        'is-invalid': isSubmit && formControl['email'].errors
+      }"
+    />
+
+    <div
+      *ngIf="isSubmit && formControl['email'].errors"
+      class="invalid-feedback"
+    >
+      <div *ngIf="formControl['email'].errors['required']">
+        Debes poner tu email.
+      </div>
+
+      <div *ngIf="formControl['email'].errors['email']">
+        Debes poner un correo electrónico válido.
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Contraseña</label>
+    <input
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Contraseña"
+      formControlName="password"
+      required
+      [ngClass]="{
+        'is-invalid': isSubmit && formControl['password'].errors
+      }"
+    />
+
+    <div
+      *ngIf="isSubmit && formControl['password'].errors"
+      class="invalid-feedback"
+    >
+      <div *ngIf="formControl['password'].errors['required']">
+        Debes poner una contraseña.
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Repetir contraseña</label>
+    <input
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Contraseña"
+      formControlName="passwordMatch"
+      required
+      [ngClass]="{
+        'is-invalid': isSubmit && formControl['passwordMatch'].errors
+      }"
+    />
+
+    <div
+      *ngIf="isSubmit && formControl['passwordMatch'].errors"
+      class="invalid-feedback"
+    >
+      <div *ngIf="formControl['passwordMatch'].errors['required']">
+        Debes poner una contraseña.
+      </div>
+      <div *ngIf="formControl['passwordMatch'].errors['confirmedValidator']">
+        Ambas contraseñas deben de ser iguales
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="submit()">
+    Registrar usuario
+  </button>
+</form>

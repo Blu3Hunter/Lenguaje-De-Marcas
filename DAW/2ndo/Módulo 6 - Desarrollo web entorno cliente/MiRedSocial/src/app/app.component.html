@@ -1,0 +1,13 @@
+<div *ngIf="flag == false">
+  <div class="cardsFlex">
+    <div class="cards" *ngFor="let eq of users">
+      <app-listausuarios [item]="users[counter]"> </app-listausuarios>
+      {{ increaseCounterer() }}
+      <!-- esto esta asi porque no me deja meter eq en Users[] ya que me dice : El tipo 'Usuario' no se puede utilizar como tipo de índice -->
+    </div>
+  </div>
+</div>
+
+<div *ngIf="flag == true">pene</div>
+
+<app-registrousuarios></app-registrousuarios>
