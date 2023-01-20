@@ -163,7 +163,9 @@
 
 
 
-                asdasd
+                <div class="text-center">
+                    <h1>Añadir producto</h1>
+                </div>
 
 
 
