@@ -30,10 +30,16 @@ class AdminController extends Controller
     public function delete_category($id)
     {
 
-        $data=Category::find($id);
-        
+        $data = Category::find($id);
+
         $data->delete();
 
         return redirect()->back()->with('message', '¡Categoria borrada correctamente!');
+    }
+
+    public function view_product()
+    {
+
+        return view('admin.product');
     }
 }

@@ -46,15 +46,33 @@
                         <span class="menu-title">Category</span>
                     </a>
                 </li>
+                </li>
+
+                <li class="nav-item profile">
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="{{url('/view_product')}}">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-speedometer"></i>
+                        </span>
+                        <span class="menu-title">Añadir productos</span>
+                    </a>
+                </li>
+                </li>
+
+                <li class="nav-item profile">
                 <li class="nav-item menu-items">
                     <a class="nav-link" href="{{url('view_category')}}">
                         <span class="menu-icon">
                             <i class="mdi mdi-speedometer"></i>
                         </span>
-                        <span class="menu-title">Products</span>
+                        <span class="menu-title">Ver Productos</span>
                     </a>
                 </li>
+                </li>
+
             </ul>
+
+
         </nav>
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
