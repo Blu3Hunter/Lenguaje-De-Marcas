@@ -34,15 +34,14 @@
         }
     </style>
 
-
 </head>
 
 <body>
 
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-            <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" /></a>
-            <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+            <a class="sidebar-brand brand-logo" href="{{url('/redirect')}}"><img src="assets/images/logo.svg" alt="logo" /></a>
+            <a class="sidebar-brand brand-logo-mini" href="{{url('/redirect')}}"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
         </div>
         <ul class="nav">
             <li class="nav-item profile">
@@ -51,20 +50,31 @@
                     <span class="menu-icon">
                         <i class="mdi mdi-speedometer"></i>
                     </span>
-                    <span class="menu-title">Category</span>
+                    <span class="menu-title">Categorias</span>
                 </a>
             </li>
 
+            <li class="nav-item profile">
+            <li class="nav-item menu-items">
+                <a class="nav-link" href="{{url('/view_product')}}">
+                    <span class="menu-icon">
+                        <i class="mdi mdi-speedometer"></i>
+                    </span>
+                    <span class="menu-title">Añadir productos</span>
+                </a>
+            </li>
+            </li>
 
-
-
-
-            
-
-
-
-
-
+            <li class="nav-item profile">
+            <li class="nav-item menu-items">
+                <a class="nav-link" href="{{url('/show_product')}}">
+                    <span class="menu-icon">
+                        <i class="mdi mdi-speedometer"></i>
+                    </span>
+                    <span class="menu-title">Ver Productos</span>
+                </a>
+            </li>
+            </li>
 
         </ul>
     </nav>
@@ -89,49 +99,6 @@
                 </ul>
 
                 <ul class="navbar-nav navbar-nav-right">
-                    <li class="nav-item dropdown d-none d-lg-block">
-                        <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-toggle="dropdown" aria-expanded="false" href="#">+ Create New Project</a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
-                            <h6 class="p-3 mb-0">Projects</h6>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item preview-item">
-                                <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-dark rounded-circle">
-                                        <i class="mdi mdi-file-outline text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="preview-item-content">
-                                    <p class="preview-subject ellipsis mb-1">Software Development</p>
-                                </div>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item preview-item">
-                                <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-dark rounded-circle">
-                                        <i class="mdi mdi-web text-info"></i>
-                                    </div>
-                                </div>
-                                <div class="preview-item-content">
-                                    <p class="preview-subject ellipsis mb-1">UI Development</p>
-                                </div>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item preview-item">
-                                <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-dark rounded-circle">
-                                        <i class="mdi mdi-layers text-danger"></i>
-                                    </div>
-                                </div>
-                                <div class="preview-item-content">
-                                    <p class="preview-subject ellipsis mb-1">Software Testing</p>
-                                </div>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <p class="p-3 mb-0 text-center">See all projects</p>
-                        </div>
-                    </li>
-
-
 
                     <li class="nav-item dropdown">
 
@@ -152,12 +119,6 @@
 
                     @if(session()->has('message'))
 
-
-                    <!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">X</button>
-                        {{session()->get('message')}}
-                    </div> -->
-
                     <div class="alert alert-success">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">X</button>
                         {{session()->get('message')}}
@@ -166,7 +127,7 @@
                     @endif
 
                     <div class="text-center">
-                        <span class="text-3xl">Add Category</span>
+                        <span class="text-3xl">Añadir Categoria</span>
                     </div>
 
                     <form class="mt-6" action="{{url('/add_category')}}" method="POST">
@@ -175,7 +136,7 @@
 
                         <div class="mb-6">
                             <label for="categoria" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre de la categoría</label>
-                            <input type="text" id="text" name="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Introduce el nombre de la categoria" required>
+                            <input type="text" id="categoria" name="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Introduce el nombre de la categoria" required>
                         </div>
 
                         <button type="submit" name="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
@@ -183,8 +144,8 @@
 
                         <table class="customTable">
                             <tr>
-                                <td>Category Name</td>
-                                <td>Action</td>
+                                <td>Nombre de la categoría</td>
+                                <td>Acción</td>
                             </tr>
 
                             @foreach($data as $data)
@@ -206,7 +167,6 @@
 
 
         </nav>
-
 
 
         <!-- plugins:js -->

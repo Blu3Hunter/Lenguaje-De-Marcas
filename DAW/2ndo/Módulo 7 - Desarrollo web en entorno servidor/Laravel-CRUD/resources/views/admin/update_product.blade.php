@@ -1,11 +1,8 @@
-<x-app-layout>
-
-</x-app-layout>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <base href="/public">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,8 +30,8 @@
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-                <a class="sidebar-brand brand-logo" href="{{url('/redirect')}}"><img src="assets/images/logo.svg" alt="logo" /></a>
-                <a class="sidebar-brand brand-logo-mini" href="{{url('/redirect')}}"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+                <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" /></a>
+                <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
             </div>
             <ul class="nav">
                 <li class="nav-item profile">
@@ -54,7 +51,7 @@
                         <span class="menu-icon">
                             <i class="mdi mdi-speedometer"></i>
                         </span>
-                        <span class="menu-title">Añadir productos</span>
+                        <span class="menu-title">Añadir producto</span>
                     </a>
                 </li>
                 </li>
@@ -72,7 +69,9 @@
 
             </ul>
 
+
         </nav>
+
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
             <!-- partial:partials/_navbar.html -->
@@ -98,7 +97,6 @@
 
                         <li class="nav-item dropdown">
 
-
                             <x-app-layout>
 
                             </x-app-layout>
@@ -110,16 +108,70 @@
                     </button>
                 </div>
             </nav>
+
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
-                    <div class="text-center">
-                        <span class="text-3xl">Bienvenido Administrador</span>
+
+                    @if(session()->has('message'))
+
+                    <div class="alert alert-success">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">X</button>
+                        {{session()->get('message')}}
                     </div>
+
+                    @endif
+
+                    <div class="text-center">
+                        <h1>Editar producto</h1>
+                    </div>
+
+                    <form action="{{url('/add_product')}}" method="POST">
+
+                        @csrf
+
+                        <div class="mb-6">
+                            <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Titulo</label>
+                            <input value="{{$product->title}}" type="text" id="title" name="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Añade el titulo del producto" required>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripcion</label>
+                            <input value="{{$product->description}}" type="text" id="description" name="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Añade la descripción del producto" required>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Precio</label>
+                            <input value="{{$product->price}}" type="number" id="price" name="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Añade el precio del producto" required>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="discount_price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descuento</label>
+                            <input value="{{$product->discount_price}}" type="text" id="discount_price" name="discount_price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Añade el descuento del producto">
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="quantity" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Cantidad</label>
+                            <input value="{{$product->quantity}}" type="number" min="0" id="quantity" name="quantity" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Añade la cantidad que hay de este producto" required>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Categoria</label>
+                            <select id="category" name="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                                <option selected>Elige una categoria</option>
+                                <option value="{{$product->category_name}}"></option>
+
+                            </select>
+                        </div>
+
+                        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Editar</button>
+                    </form>
+
 
                 </div>
                 <!-- main-panel ends -->
             </div>
+
             <!-- page-body-wrapper ends -->
         </div>
         <!-- container-scroller -->

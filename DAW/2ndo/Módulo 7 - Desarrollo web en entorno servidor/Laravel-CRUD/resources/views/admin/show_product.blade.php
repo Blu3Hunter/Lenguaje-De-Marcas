@@ -26,6 +26,18 @@
     <link rel="stylesheet" href="admin/assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
+
+    <style>
+        .customTable {
+            margin: auto;
+            width: 50%;
+            text-align: center;
+            margin-top: 30px;
+            border: 3px solid orange;
+
+        }
+    </style>
+
 </head>
 
 <body>
@@ -33,8 +45,8 @@
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-                <a class="sidebar-brand brand-logo" href="{{url('/redirect')}}"><img src="assets/images/logo.svg" alt="logo" /></a>
-                <a class="sidebar-brand brand-logo-mini" href="{{url('/redirect')}}"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+                <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" /></a>
+                <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
             </div>
             <ul class="nav">
                 <li class="nav-item profile">
@@ -72,6 +84,7 @@
 
             </ul>
 
+
         </nav>
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
@@ -98,28 +111,81 @@
 
                         <li class="nav-item dropdown">
 
-
                             <x-app-layout>
 
                             </x-app-layout>
 
                         </li>
                     </ul>
+
                     <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
                         <span class="mdi mdi-format-line-spacing"></span>
                     </button>
+
                 </div>
             </nav>
+
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
-                    <div class="text-center">
-                        <span class="text-3xl">Bienvenido Administrador</span>
+
+                    @if(session()->has('message'))
+
+                    <div class="alert alert-success">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">X</button>
+                        {{session()->get('message')}}
                     </div>
+
+                    @endif
+                    <div class="text-center">
+                        <span class="text-3xl">Ver productos</span>
+                    </div>
+
+                    <table class="customTable">
+
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Descripcion</th>
+                            <th>Categoria</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Descuento</th>
+                            <th>Acción</th>
+                        </tr>
+
+                        @foreach($product as $product)
+
+                        <tr>
+
+                            <td>{{$product->title}}</td>
+                            <td>{{$product->description}}</td>
+                            <td>{{$product->category}}</td>
+                            <td>{{$product->quantity}}</td>
+                            <td>{{$product->price}}</td>
+                            <td>{{$product->discount_price}}</td>
+
+                            <form action="{{url('update_product', $product->id)}}">
+
+                                <td><button href="" type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Editar</button></td>
+
+                            </form>
+
+                            <form action="{{url('delete_product',$product->id)}}">
+
+                                <td><button type="submit" onclick="return confirm('¿Estás seguro de que quieres borrar este producto?')" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Borrar</button></td>
+
+                            </form>
+
+                        </tr>
+
+                        @endforeach
+
+                    </table>
 
                 </div>
                 <!-- main-panel ends -->
             </div>
+
             <!-- page-body-wrapper ends -->
         </div>
         <!-- container-scroller -->
