@@ -1,0 +1,20 @@
+<h1>Buscador de gatitos</h1>
+
+<div class="center">
+  <mat-form-field class="example-full-width">
+    <mat-label>Numero de gatitos: </mat-label>
+    <input
+      [formControl]="limitControl"
+      matInput
+      placeholder="2"
+      type="number"
+    />
+  </mat-form-field>
+  <button (click)="search()"><mat-icon>search</mat-icon></button>
+</div>
+
+<div class="gatos">
+  <div class="center-div" *ngFor="let cat of cats">
+    <img class="img" src="{{ cat.url }}" alt="" />
+  </div>
+</div>
