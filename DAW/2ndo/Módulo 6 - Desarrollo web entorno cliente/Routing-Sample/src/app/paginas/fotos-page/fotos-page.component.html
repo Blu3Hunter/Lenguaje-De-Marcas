@@ -1,0 +1,9 @@
+<h2>Esta es la Fotos Page</h2>
+
+<h3>Contenido de la Fotos Page</h3>
+<div style="display: inline-flex">
+  <div style="padding-right: 10px" *ngFor="let image of images">
+    <img style="cursor: pointer" [src]="image.img" (click)="verImagen(image)">
+    <p>{{image.dsc}}</p>
+  </div>
+</div>

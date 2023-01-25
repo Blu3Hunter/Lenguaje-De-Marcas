@@ -28,7 +28,6 @@ export class AuthGuard implements CanActivate {
     | UrlTree {
     //TODO: Implementar la condición para poder entrar dentro de la MainPage
 
-
     if (
       this.authService.user.email != '' &&
       this.authService.user.password != ''
