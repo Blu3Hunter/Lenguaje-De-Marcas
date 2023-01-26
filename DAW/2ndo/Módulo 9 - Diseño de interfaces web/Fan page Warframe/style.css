@@ -3,25 +3,7 @@
   margin: 0;
   padding: 0;
 }
-::-webkit-scrollbar {
-  width: 10px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-  border-radius: 2px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: crimson;
-  border-radius: 4px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #b30000;
-}
 ul {
   margin: 0;
   padding: 0;
@@ -152,21 +134,6 @@ footer {
   transform: rotate(45deg);
   left: -110%;
   top: 90%;
-}
-
-@keyframes icons {
-  0% {
-    left: -110%;
-    top: 90%;
-  }
-  50% {
-    left: 10%;
-    top: -30%;
-  }
-  100% {
-    left: -10%;
-    top: -10%;
-  }
 }
 
 .footer-bottom {
