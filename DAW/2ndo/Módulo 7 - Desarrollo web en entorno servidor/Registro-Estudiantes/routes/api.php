@@ -26,6 +26,7 @@ Route::group(['middleware' => ["auth:sanctum"]], function () { // AUTH USER (Se 
     Route::get('logout', [UserController::class, 'logout']);
     Route::post('readUser', [UserController::class, 'readUser']);
 
+
     Route::group(['middleware' => ['permission:student-admin']], function () { // PERMISO MODIFICAR STUDENT
         Route::post('insertStudent', [Students::class, 'insertStudent']);
         Route::post('deleteStudent', [Students::class, 'deleteStudent']);
